@@ -11,6 +11,13 @@
 		350D44E3265BCA740008C02F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D44E2265BCA740008C02F /* ContentView.swift */; };
 		350D44E5265BCA750008C02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 350D44E4265BCA750008C02F /* Assets.xcassets */; };
 		350D44E8265BCA750008C02F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 350D44E7265BCA750008C02F /* Preview Assets.xcassets */; };
+		35C877A9265C0349002A98C7 /* CalculatorTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C877A8265C0349002A98C7 /* CalculatorTab.swift */; };
+		35C877AB265C0376002A98C7 /* LocationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C877AA265C0376002A98C7 /* LocationTab.swift */; };
+		35C877AD265C26F0002A98C7 /* SettingsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C877AC265C26F0002A98C7 /* SettingsTab.swift */; };
+		35C877AF265C2A42002A98C7 /* SpeedCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C877AE265C2A42002A98C7 /* SpeedCalculator.swift */; };
+		35C877B1265C2BB2002A98C7 /* TipCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C877B0265C2BB2002A98C7 /* TipCalculator.swift */; };
+		35C877B3265C2BEE002A98C7 /* MeasurementCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C877B2265C2BEE002A98C7 /* MeasurementCalculator.swift */; };
+		35C877B5265C2C16002A98C7 /* CurrencyCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C877B4265C2C16002A98C7 /* CurrencyCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +27,13 @@
 		350D44E4265BCA750008C02F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		350D44E7265BCA750008C02F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		350D44E9265BCA750008C02F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35C877A8265C0349002A98C7 /* CalculatorTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTab.swift; sourceTree = "<group>"; };
+		35C877AA265C0376002A98C7 /* LocationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTab.swift; sourceTree = "<group>"; };
+		35C877AC265C26F0002A98C7 /* SettingsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTab.swift; sourceTree = "<group>"; };
+		35C877AE265C2A42002A98C7 /* SpeedCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedCalculator.swift; sourceTree = "<group>"; };
+		35C877B0265C2BB2002A98C7 /* TipCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculator.swift; sourceTree = "<group>"; };
+		35C877B2265C2BEE002A98C7 /* MeasurementCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementCalculator.swift; sourceTree = "<group>"; };
+		35C877B4265C2C16002A98C7 /* CurrencyCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +66,8 @@
 		350D44DF265BCA740008C02F /* Reiseapp */ = {
 			isa = PBXGroup;
 			children = (
+				35C877B7265C2C5E002A98C7 /* Tabs */,
+				35C877B6265C2C23002A98C7 /* Calculators */,
 				350D44E0265BCA740008C02F /* ReiseappApp.swift */,
 				350D44E2265BCA740008C02F /* ContentView.swift */,
 				350D44E4265BCA750008C02F /* Assets.xcassets */,
@@ -67,6 +83,27 @@
 				350D44E7265BCA750008C02F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		35C877B6265C2C23002A98C7 /* Calculators */ = {
+			isa = PBXGroup;
+			children = (
+				35C877B0265C2BB2002A98C7 /* TipCalculator.swift */,
+				35C877B4265C2C16002A98C7 /* CurrencyCalculator.swift */,
+				35C877B2265C2BEE002A98C7 /* MeasurementCalculator.swift */,
+				35C877AE265C2A42002A98C7 /* SpeedCalculator.swift */,
+			);
+			path = Calculators;
+			sourceTree = "<group>";
+		};
+		35C877B7265C2C5E002A98C7 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				35C877A8265C0349002A98C7 /* CalculatorTab.swift */,
+				35C877AA265C0376002A98C7 /* LocationTab.swift */,
+				35C877AC265C26F0002A98C7 /* SettingsTab.swift */,
+			);
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +175,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35C877B5265C2C16002A98C7 /* CurrencyCalculator.swift in Sources */,
+				35C877AB265C0376002A98C7 /* LocationTab.swift in Sources */,
 				350D44E3265BCA740008C02F /* ContentView.swift in Sources */,
+				35C877AD265C26F0002A98C7 /* SettingsTab.swift in Sources */,
 				350D44E1265BCA740008C02F /* ReiseappApp.swift in Sources */,
+				35C877A9265C0349002A98C7 /* CalculatorTab.swift in Sources */,
+				35C877AF265C2A42002A98C7 /* SpeedCalculator.swift in Sources */,
+				35C877B3265C2BEE002A98C7 /* MeasurementCalculator.swift in Sources */,
+				35C877B1265C2BB2002A98C7 /* TipCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

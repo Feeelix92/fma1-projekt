@@ -65,7 +65,7 @@ struct CalculatorCard: View {
             Spacer()
         }
         .frame(maxWidth: .infinity, alignment: .center)
-        .background(Color.white)
+        .background(Color(UIColor.secondarySystemBackground))
         .modifier(CardModifier())
         .padding(.all, 10)
     }
@@ -75,7 +75,7 @@ struct CardModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .cornerRadius(20)
-            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 0)
+//            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 0)
     }
     
 }

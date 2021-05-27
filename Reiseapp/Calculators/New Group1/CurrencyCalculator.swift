@@ -2,7 +2,7 @@
 //  CurrencyCalculator.swift
 //  Reiseapp
 //
-//  Created by Nicklas Düringer on 24.05.21.
+//  Created by FMA1 on 27.05.21.
 //
 
 import SwiftUI

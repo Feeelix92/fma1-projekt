@@ -18,7 +18,10 @@ struct CurrencyExchange: View {
                 ScrollView{
                     //Fetched Data
                     LazyVStack(alignment: .leading, spacing: 15, content: {
-                        ForEach(viewModel.conversionData) { rate in
+                        let sortedData = viewModel.conversionData.sorted{
+                            return $0.currencyName < $1.currencyName
+                        }
+                        ForEach(sortedData) { rate in
                             HStack(spacing: 15){
                                 
                                 Text(getFlag(currency: rate.currencyName))
@@ -40,7 +43,7 @@ struct CurrencyExchange: View {
             }
         }
     }
-    // gettin Country Flag by currency name
+    // getting Country Flag by currency name
     func getFlag(currency: String)->String{
         let base = 127397
         var code = currency
@@ -48,9 +51,10 @@ struct CurrencyExchange: View {
         
         var scalar = String.UnicodeScalarView()
         for i in code.utf16{
-            scalar.append(UnicodeScalar(base + Int(i))!)
+            if UnicodeScalar(base + Int(i)) != nil {
+                scalar.append(UnicodeScalar(base + Int(i))!)
+            }
         }
         return String(scalar)
     }
-    
 }

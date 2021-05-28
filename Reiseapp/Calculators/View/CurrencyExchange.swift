@@ -9,18 +9,34 @@ import SwiftUI
 
 struct CurrencyExchange: View {
     @StateObject var viewModel = FetchData()
+    @State var searchQuery = ""
+    
     var body: some View {
+        let sortedData = viewModel.conversionData.sorted{
+            return $0.currencyName < $1.currencyName
+        }
         VStack{
-            if viewModel.conversionData.isEmpty{
+            //Search Bar
+            HStack(spacing: 15){
+                Image(systemName: "magnifyingglass")
+                    .font(.system(size: 23, weight: .bold))
+                    .foregroundColor(.gray)
+                TextField("Search", text: $searchQuery)
+            }
+            .padding(.vertical, 10)
+            .padding(.horizontal)
+            .background(Color.primary.opacity(0.05))
+            .cornerRadius(8)
+            .padding()
+            
+            // List of Currency Exchange Rates
+            if sortedData.isEmpty{
                 ProgressView()
             }
             else{
                 ScrollView{
                     //Fetched Data
                     LazyVStack(alignment: .leading, spacing: 15, content: {
-                        let sortedData = viewModel.conversionData.sorted{
-                            return $0.currencyName < $1.currencyName
-                        }
                         ForEach(sortedData) { rate in
                             HStack(spacing: 15){
                                 

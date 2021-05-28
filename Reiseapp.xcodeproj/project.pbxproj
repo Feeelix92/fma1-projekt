@@ -64,7 +64,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		094DBAA92660152200877E51 /* View */ = {
+		094DBAAA2660153600877E51 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				092469CE26601ADD00EF8B3A /* FetchData.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		09A96A8D2661226600A18775 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				35C877B2265C2BEE002A98C7 /* MeasurementCalculator.swift */,
@@ -74,14 +82,6 @@
 				0957AB892660382700FC86F6 /* CurrencyCalculator.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		094DBAAA2660153600877E51 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				092469CE26601ADD00EF8B3A /* FetchData.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		350D44D4265BCA740008C02F = {
@@ -125,9 +125,9 @@
 		35C877B6265C2C23002A98C7 /* Calculators */ = {
 			isa = PBXGroup;
 			children = (
+				09A96A8D2661226600A18775 /* View */,
 				094DBAA7266014D400877E51 /* Model */,
 				094DBAAA2660153600877E51 /* ViewModel */,
-				094DBAA92660152200877E51 /* View */,
 			);
 			path = Calculators;
 			sourceTree = "<group>";

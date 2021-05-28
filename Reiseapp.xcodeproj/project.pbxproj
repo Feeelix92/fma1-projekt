@@ -73,7 +73,7 @@
 				35C877B0265C2BB2002A98C7 /* TipCalculator.swift */,
 				0957AB892660382700FC86F6 /* CurrencyCalculator.swift */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		094DBAAA2660153600877E51 /* ViewModel */ = {

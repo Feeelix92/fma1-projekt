@@ -74,7 +74,6 @@
 				0957AB892660382700FC86F6 /* CurrencyCalculator.swift */,
 			);
 			name = View;
-			path = "New Group1";
 			sourceTree = "<group>";
 		};
 		094DBAAA2660153600877E51 /* ViewModel */ = {

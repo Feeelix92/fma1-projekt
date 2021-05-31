@@ -15,6 +15,7 @@
 		350D44E1265BCA740008C02F /* ReiseappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D44E0265BCA740008C02F /* ReiseappApp.swift */; };
 		350D44E5265BCA750008C02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 350D44E4265BCA750008C02F /* Assets.xcassets */; };
 		350D44E8265BCA750008C02F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 350D44E7265BCA750008C02F /* Preview Assets.xcassets */; };
+		353540C52664155E005255D5 /* TipCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353540C42664155E005255D5 /* TipCalculatorModel.swift */; };
 		35C877A9265C0349002A98C7 /* CalculatorTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C877A8265C0349002A98C7 /* CalculatorTab.swift */; };
 		35C877AB265C0376002A98C7 /* LocationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C877AA265C0376002A98C7 /* LocationTab.swift */; };
 		35C877AD265C26F0002A98C7 /* SettingsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C877AC265C26F0002A98C7 /* SettingsTab.swift */; };
@@ -35,6 +36,7 @@
 		350D44E4265BCA750008C02F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		350D44E7265BCA750008C02F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		350D44E9265BCA750008C02F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		353540C42664155E005255D5 /* TipCalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorModel.swift; sourceTree = "<group>"; };
 		35C877A8265C0349002A98C7 /* CalculatorTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTab.swift; sourceTree = "<group>"; };
 		35C877AA265C0376002A98C7 /* LocationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTab.swift; sourceTree = "<group>"; };
 		35C877AC265C26F0002A98C7 /* SettingsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTab.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				092469C72660195D00EF8B3A /* Conversion.swift */,
 				092469CB26601A1100EF8B3A /* Currency.swift */,
+				353540C42664155E005255D5 /* TipCalculatorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35C877B5265C2C16002A98C7 /* CurrencyExchange.swift in Sources */,
+				353540C52664155E005255D5 /* TipCalculatorModel.swift in Sources */,
 				092469C82660195D00EF8B3A /* Conversion.swift in Sources */,
 				0957AB8A2660382700FC86F6 /* CurrencyCalculator.swift in Sources */,
 				092469D4266027DB00EF8B3A /* ContentView.swift in Sources */,

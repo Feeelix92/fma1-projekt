@@ -47,14 +47,14 @@ struct CurrencyCalculator: View {
                 CalculatorCard(image: "banknote", title: "Wechselkurse")
             }
             .buttonStyle(PlainButtonStyle())
+            Spacer()
         }
-        .navigationBarTitle("Währungsrechner", displayMode: .inline)
-        .background(Color.green)
         .padding()
+        .navigationBarTitle("Währungsrechner", displayMode: .inline)
         .onAppear {
             currencyAmountTextField = String(format: "%0.2f", currencyCalc.currencyAmount)
-            currencyBaseTextField = String(format: "%0.2f", currencyCalc.currencyBase)
-            currencyOutputTextField = String(format: "%0.2f", currencyCalc.currencyOutput)
+            currencyBaseTextField = String(format: "EUR", currencyCalc.currencyBase)
+            currencyOutputTextField = String(format: "USD", currencyCalc.currencyOutput)
         }
     }
 }

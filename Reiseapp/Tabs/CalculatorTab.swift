@@ -28,7 +28,7 @@ struct CalculatorTab: View {
                 }
                 .buttonStyle(PlainButtonStyle())
                 NavigationLink(
-                    destination: CurrencyExchange()) {
+                    destination: CurrencyCalculator()) {
                     CalculatorCard(image: "banknote", title: "Währung")
                 }
                 .buttonStyle(PlainButtonStyle())

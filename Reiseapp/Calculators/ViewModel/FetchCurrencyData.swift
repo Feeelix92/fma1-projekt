@@ -9,13 +9,16 @@ import SwiftUI
 
 class FetchCurrencyData: ObservableObject {
     @Published var conversionData : [Currency] = []
+    var baseCurrency: String?
     
-    init() {
+    init(baseCurrency: String) {
+        self.baseCurrency = baseCurrency
         fetch()
     }
     
-    func fetch(){
-        let url = "https://api.exchangerate.host/latest"
+func fetch(){
+        let urlData = "latest?base=" + self.baseCurrency!
+        let url = "https://api.exchangerate.host/" + urlData
         let session = URLSession(configuration: .default)
         
         session.dataTask(with: URL(string: url)!) { (data, _, _) in

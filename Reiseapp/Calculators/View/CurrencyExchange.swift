@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct CurrencyExchange: View {
-    @StateObject var viewModel = FetchCurrencyData(baseCurrency: "USD")
+   
+    @StateObject var viewModel = FetchCurrencyData()
     // Search Text
     @State var searchQuery = ""
     // Offsets
@@ -34,9 +35,10 @@ struct CurrencyExchange: View {
                     (   Text("Wechselkurse")
                             .fontWeight(.bold)
                             .foregroundColor(.gray)
-                        +
-                        Text(" - EUR")
-                            .foregroundColor(.gray)
+                        
+                        //+
+                        //Text(" - \(selectedCurrency)")
+                          //  .foregroundColor(.gray)
                     )
                     .font(.largeTitle)
                     .overlay(

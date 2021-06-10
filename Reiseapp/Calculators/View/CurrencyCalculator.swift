@@ -24,6 +24,17 @@ struct CurrencyCalculator: View {
     var body: some View {
         VStack{
             VStack{
+                HStack{
+                    Text("Betrag:")
+                        .frame(width: 170, alignment: .leading)
+                    TextField("", text: $currencyAmountTextField)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .keyboardType(.decimalPad)
+                        .onChange(of: currencyAmountTextField){ newValue in
+                            currencyCalc.currencyAmount = Double(currencyAmountTextField)!
+                            currencyCalc.convert()
+                        }
+                }
                 DisclosureGroup("Ausgangswährung: \(selectedCurrencyBase)", isExpanded: $isCurrencyBaseScrollExpanded) {
                     ScrollView{
                         VStack{
@@ -65,17 +76,6 @@ struct CurrencyCalculator: View {
                     .frame(height: 150, alignment: .leading)
                 }
             }
-            HStack{
-                Text("Betrag:")
-                    .frame(width: 170, alignment: .leading)
-                TextField("", text: $currencyAmountTextField)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.decimalPad)
-                    .onChange(of: currencyAmountTextField){ newValue in
-                        currencyCalc.currencyAmount = Double(currencyAmountTextField)!
-                        currencyCalc.convert()
-                    }
-            }
             Button(action: {
                 // Button Action
                 currencyCalc.currencyAmount = Double(currencyAmountTextField)!
@@ -88,6 +88,7 @@ struct CurrencyCalculator: View {
             })
             Text(String(format: "Umrechnungsbetrag: %0.2f", self.convertedCurrencyAmount))
                 .font(.subheadline)
+            Divider()
             NavigationLink(
                 destination: CurrencyExchange()) {
                 CalculatorCard(image: "banknote", title: "Wechselkurse")

@@ -8,7 +8,7 @@
 import SwiftUI
 
 class FetchCurrencyData: ObservableObject {
-    @Published var conversionData : [Currency] = []
+    @Published var conversionData : [CurrencyRate] = []
     var currencyBase: String?
     
     init(currencyBase: String? = "EUR") {
@@ -31,8 +31,8 @@ class FetchCurrencyData: ObservableObject {
                 DispatchQueue.main.async {
                     // Key will be Currency Name
                     // value will be currency Value
-                    let data = conversion.rates.compactMap({ (key, value) -> Currency? in
-                    return Currency(currencyName: key, currencyValue: value)
+                    let data = conversion.rates.compactMap({ (key, value) -> CurrencyRate? in
+                    return CurrencyRate(currencyName: key, currencyValue: value)
                     })
                     self.conversionData = data.sorted{
                         return $0.currencyName < $1.currencyName

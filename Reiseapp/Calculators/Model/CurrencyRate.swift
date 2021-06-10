@@ -8,7 +8,7 @@
 import SwiftUI
 
 // Display Data
-struct Currency: Identifiable {
+struct CurrencyRate: Identifiable {
     var id = UUID().uuidString
     var currencyName: String
     var currencyValue: Double

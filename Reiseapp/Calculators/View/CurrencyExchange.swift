@@ -32,10 +32,6 @@ struct CurrencyExchange: View {
                     (   Text("Wechselkurse")
                             .fontWeight(.bold)
                             .foregroundColor(.gray)
-                        
-                        //+
-                        //Text(" - \(selectedCurrency)")
-                          //  .foregroundColor(.gray)
                     )
                     .font(.largeTitle)
                     .overlay(
@@ -74,8 +70,6 @@ struct CurrencyExchange: View {
             }
             .offset(y: offset > 0 && searchQuery == "" ? (offset <= 95 ? -offset : -95) : 0)
         }
-        // test
-        //.background(Color.pink)
         .zIndex(1)
         // padding bottom
         // decrease height of the view
@@ -103,7 +97,7 @@ struct CurrencyExchange: View {
             ScrollView(.vertical, showsIndicators: false, content: {
                 //Fetched Data
                 VStack(spacing: 15){
-                    ForEach(viewModel.conversionData) { rate in
+                    ForEach(viewModel.conversionData.filter({ searchQuery.isEmpty ? true : $0.currencyName.contains(searchQuery.uppercased())})) { rate in
                         HStack(spacing: 15){
                             Text(getFlag(currency: rate.currencyName))
                             .font(.system(size: 65))

@@ -24,9 +24,6 @@ struct CurrencyExchange: View {
     @Environment(\.colorScheme) var scheme
     
     var body: some View {
-        let sortedData = viewModel.conversionData.sorted{
-            return $0.currencyName < $1.currencyName
-        }
     ZStack(alignment: .top){
         // moving the search bar to the top if user starts typing
         VStack{
@@ -106,7 +103,7 @@ struct CurrencyExchange: View {
             ScrollView(.vertical, showsIndicators: false, content: {
                 //Fetched Data
                 VStack(spacing: 15){
-                    ForEach(sortedData) { rate in
+                    ForEach(viewModel.conversionData) { rate in
                         HStack(spacing: 15){
                             Text(getFlag(currency: rate.currencyName))
                             .font(.system(size: 65))

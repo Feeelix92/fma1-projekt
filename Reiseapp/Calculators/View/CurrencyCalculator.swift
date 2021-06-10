@@ -9,31 +9,30 @@ import SwiftUI
 
 struct CurrencyCalculator: View {
     @StateObject var viewModel = FetchCurrencyData()
-
-    @State private var isExpanded = false
-    @State private var selectedCurrency = "EUR"
+    
     @State private var isCurrencyBaseScrollExpanded = false
     @State private var isCurrencyOutputScrollExpanded = false
     @State private var selectedCurrencyBase = "EUR"
     @State private var selectedCurrencyOutput = "USD"
-    @State var currencyAmountTextField = ""
+    @State private var currencyAmount = 33.25
+    @State private var convertedCurrencyAmount = 0.0
+
+    @State private var currencyAmountTextField = ""
     
-    let currencyCalc = CurrencyCalculatorModel(currencyBase: "EUR", currencyOutput: "USD", currencyAmount: 33.25, exchangeRate: 0.75)
+    var currencyCalc = CurrencyCalculatorModel(currencyBase: "EUR", currencyOutput: "USD", currencyAmount: 33.25)
     
     var body: some View {
-        let sortedData = viewModel.conversionData.sorted{
-            return $0.currencyName < $1.currencyName
-        }
         VStack{
             VStack{
                 DisclosureGroup("Ausgangswährung: \(selectedCurrencyBase)", isExpanded: $isCurrencyBaseScrollExpanded) {
                     ScrollView{
                         VStack{
-                            ForEach(sortedData) { rate in
+                            ForEach(viewModel.conversionData) { rate in
                                 Text(rate.currencyName)
                                     .frame(maxWidth: .infinity)
                                     .font(.title3)
                                     .onTapGesture{
+                                        currencyCalc.currencyBase = rate.currencyName
                                         self.selectedCurrencyBase = rate.currencyName
                                         withAnimation{
                                             self.isCurrencyBaseScrollExpanded.toggle()
@@ -47,11 +46,12 @@ struct CurrencyCalculator: View {
                 DisclosureGroup("Zielwährung: \(selectedCurrencyOutput)", isExpanded: $isCurrencyOutputScrollExpanded) {
                     ScrollView{
                         VStack{
-                            ForEach(sortedData) { rate in
+                            ForEach(viewModel.conversionData) { rate in
                                 Text(rate.currencyName)
                                     .frame(maxWidth: .infinity)
                                     .font(.title3)
                                     .onTapGesture{
+                                        currencyCalc.currencyOutput = rate.currencyName
                                         self.selectedCurrencyOutput = rate.currencyName
                                         withAnimation{
                                             self.isCurrencyOutputScrollExpanded.toggle()
@@ -71,10 +71,16 @@ struct CurrencyCalculator: View {
                     .keyboardType(.decimalPad)
             }
             Button(action: {
-                // Button Action
+                // Button Action                
+                currencyCalc.convert()
+                self.convertedCurrencyAmount = currencyCalc.convertedAmount!
+                print("view: \(self.convertedCurrencyAmount)")
+                
             }, label: {
                 Text("Calculate")
             })
+            Text(String(format: "Umrechnungsbetrag: %0.2f", self.convertedCurrencyAmount))
+                .font(.subheadline)
             NavigationLink(
                 destination: CurrencyExchange()) {
                 CalculatorCard(image: "banknote", title: "Wechselkurse")
@@ -85,7 +91,7 @@ struct CurrencyCalculator: View {
         .padding()
         .navigationBarTitle("Währungsrechner", displayMode: .inline)
         .onAppear {
-            currencyAmountTextField = String(format: "%0.2f", currencyCalc.currencyAmount)
+            currencyAmountTextField = String(format: "%0.2f", currencyAmount)
         }
     }
 }

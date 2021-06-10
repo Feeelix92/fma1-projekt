@@ -7,11 +7,11 @@
 
 import Foundation
 
-class CurrencyCalculatorModel {
+class CurrencyCalculatorModel: ObservableObject {
     var currencyBase: String
     var currencyOutput: String
-    var currencyAmount: Double
-    var convertedAmount: Double? = 0.0
+    @Published var currencyAmount: Double
+    @Published var convertedAmount: Double = 0.0
     
     init(currencyBase: String, currencyOutput: String, currencyAmount: Double) {
         self.currencyBase = currencyBase

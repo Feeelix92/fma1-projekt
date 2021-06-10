@@ -19,7 +19,7 @@ struct CurrencyCalculator: View {
 
     @State private var currencyAmountTextField = ""
     
-    var currencyCalc = CurrencyCalculatorModel(currencyBase: "EUR", currencyOutput: "USD", currencyAmount: 33.25)
+    @StateObject var currencyCalc = CurrencyCalculatorModel(currencyBase: "EUR", currencyOutput: "USD", currencyAmount: 33.25)
     
     var body: some View {
         VStack{
@@ -34,6 +34,7 @@ struct CurrencyCalculator: View {
                                     .onTapGesture{
                                         currencyCalc.currencyBase = rate.currencyName
                                         self.selectedCurrencyBase = rate.currencyName
+                                        currencyCalc.convert()
                                         withAnimation{
                                             self.isCurrencyBaseScrollExpanded.toggle()
                                         }
@@ -53,6 +54,7 @@ struct CurrencyCalculator: View {
                                     .onTapGesture{
                                         currencyCalc.currencyOutput = rate.currencyName
                                         self.selectedCurrencyOutput = rate.currencyName
+                                        currencyCalc.convert()
                                         withAnimation{
                                             self.isCurrencyOutputScrollExpanded.toggle()
                                         }
@@ -69,11 +71,16 @@ struct CurrencyCalculator: View {
                 TextField("", text: $currencyAmountTextField)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.decimalPad)
+                    .onChange(of: currencyAmountTextField){ newValue in
+                        currencyCalc.currencyAmount = Double(currencyAmountTextField)!
+                        currencyCalc.convert()
+                    }
             }
             Button(action: {
-                // Button Action                
+                // Button Action
+                currencyCalc.currencyAmount = Double(currencyAmountTextField)!
                 currencyCalc.convert()
-                self.convertedCurrencyAmount = currencyCalc.convertedAmount!
+                self.convertedCurrencyAmount = currencyCalc.convertedAmount
                 print("view: \(self.convertedCurrencyAmount)")
                 
             }, label: {
@@ -91,7 +98,7 @@ struct CurrencyCalculator: View {
         .padding()
         .navigationBarTitle("Währungsrechner", displayMode: .inline)
         .onAppear {
-            currencyAmountTextField = String(format: "%0.2f", currencyAmount)
+            currencyAmountTextField = String(format: "%0.2f", currencyCalc.currencyAmount)
         }
     }
 }

@@ -9,15 +9,25 @@ import SwiftUI
 
 class FetchCurrencyData: ObservableObject {
     @Published var conversionData : [Currency] = []
-    var baseCurrency: String?
+    var currencyBase: String?
+    var currencyOutput: String?
+    var currencyAmount: Double?
+    var currencyConvert: Bool?
     
-    init(baseCurrency: String) {
-        self.baseCurrency = baseCurrency
+    init(currencyBase: String? = "EUR", currencyOutput: String? = "USD", currencyAmount: Double? = 1.0, currencyConvert: Bool? = false) {
+        self.currencyBase = currencyBase!
+        self.currencyOutput = currencyOutput!
+        self.currencyAmount = currencyAmount!
+        self.currencyConvert = currencyConvert!
+        
         fetch()
     }
     
-func fetch(){
-        let urlData = "latest?base=" + self.baseCurrency!
+    func fetch(){
+        var urlData = "latest?base=\(self.currencyBase!)"
+        if currencyConvert!{
+            urlData = "convert?from=\(self.currencyBase!)&to=\(self.currencyOutput!)&amount=\(self.currencyAmount!)"
+        }
         let url = "https://api.exchangerate.host/" + urlData
         let session = URLSession(configuration: .default)
         

@@ -19,7 +19,7 @@ struct CalculatorTab: View {
                 .buttonStyle(PlainButtonStyle())
                 NavigationLink(
                     destination: MeasurementCalculator()) {
-                    CalculatorCard(image: "ruler", title: "Maß")
+                    CalculatorCard(image: "ruler", title: "Länge")
                 }
                 .buttonStyle(PlainButtonStyle())
                 NavigationLink(

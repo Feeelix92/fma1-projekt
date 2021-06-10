@@ -13,6 +13,7 @@
 		092469D4266027DB00EF8B3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092469D3266027DB00EF8B3A /* ContentView.swift */; };
 		0957AB8A2660382700FC86F6 /* CurrencyCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0957AB892660382700FC86F6 /* CurrencyCalculator.swift */; };
 		099C00662670D68300B46E0C /* ConversionConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099C00652670D68300B46E0C /* ConversionConvert.swift */; };
+		09A424A52672AA700087AE1F /* SpeedCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A424A42672AA700087AE1F /* SpeedCalculatorModel.swift */; };
 		09F7F23226668E7D000FEAD9 /* CurrencyCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F7F23126668E7D000FEAD9 /* CurrencyCalculatorModel.swift */; };
 		350D44E1265BCA740008C02F /* ReiseappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D44E0265BCA740008C02F /* ReiseappApp.swift */; };
 		350D44E5265BCA750008C02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 350D44E4265BCA750008C02F /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		092469D3266027DB00EF8B3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0957AB892660382700FC86F6 /* CurrencyCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCalculator.swift; sourceTree = "<group>"; };
 		099C00652670D68300B46E0C /* ConversionConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionConvert.swift; sourceTree = "<group>"; };
+		09A424A42672AA700087AE1F /* SpeedCalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedCalculatorModel.swift; sourceTree = "<group>"; };
 		09F7F23126668E7D000FEAD9 /* CurrencyCalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCalculatorModel.swift; sourceTree = "<group>"; };
 		350D44DD265BCA740008C02F /* Reiseapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reiseapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		350D44E0265BCA740008C02F /* ReiseappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReiseappApp.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				353540C42664155E005255D5 /* TipCalculatorModel.swift */,
 				09F7F23126668E7D000FEAD9 /* CurrencyCalculatorModel.swift */,
 				359BEA962670D1E700564AC7 /* MeasurementCalculatorModel.swift */,
+				09A424A42672AA700087AE1F /* SpeedCalculatorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09A424A52672AA700087AE1F /* SpeedCalculatorModel.swift in Sources */,
 				359BEA972670D1E700564AC7 /* MeasurementCalculatorModel.swift in Sources */,
 				35C877B5265C2C16002A98C7 /* CurrencyExchange.swift in Sources */,
 				353540C52664155E005255D5 /* TipCalculatorModel.swift in Sources */,

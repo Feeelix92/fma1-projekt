@@ -90,8 +90,8 @@ struct CurrencyCalculator: View {
                 .font(.subheadline)
             Divider()
             NavigationLink(
-                destination: CurrencyExchange()) {
-                CalculatorCard(image: "banknote", title: "Wechselkurse")
+                destination: CurrencyExchange().environmentObject(FetchCurrencyData(currencyBase: selectedCurrencyBase))) {
+                CalculatorCard(image: "banknote", title: "Wechselkurse \(selectedCurrencyBase)")
             }
             .buttonStyle(PlainButtonStyle())
             Spacer()

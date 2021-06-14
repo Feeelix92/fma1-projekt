@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CurrencyExchange: View {
    
-    @StateObject var viewModel = FetchCurrencyData()
+    @EnvironmentObject var viewModel: FetchCurrencyData
     // Search Text
     @State var searchQuery = ""
     // Offsets
@@ -29,8 +29,12 @@ struct CurrencyExchange: View {
         VStack{
             if searchQuery == ""{
                 HStack{
-                    (   Text("Wechselkurse")
+                    (   Text("Wechselkurse ")
                             .fontWeight(.bold)
+                            .foregroundColor(.primary)
+                        +
+                            
+                        Text("\(viewModel.currencyBase!)")
                             .foregroundColor(.gray)
                     )
                     .font(.largeTitle)

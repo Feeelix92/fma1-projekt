@@ -17,7 +17,7 @@ class FetchCurrencyData: ObservableObject {
     }
     
     func fetch(){
-        let urlData = "latest?base=\(self.currencyBase!)"
+        let urlData = "latest?base=\(self.currencyBase!)&source=ecb"
         let url = "https://api.exchangerate.host/\(urlData)"
         let session = URLSession(configuration: .default)
         

@@ -13,6 +13,10 @@
 		092469D4266027DB00EF8B3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092469D3266027DB00EF8B3A /* ContentView.swift */; };
 		0957AB8A2660382700FC86F6 /* CurrencyCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0957AB892660382700FC86F6 /* CurrencyCalculator.swift */; };
 		099C00662670D68300B46E0C /* ConversionConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099C00652670D68300B46E0C /* ConversionConvert.swift */; };
+		09A377172679D72700C84584 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A377162679D72700C84584 /* MapView.swift */; };
+		09A3771A2679D82D00C84584 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A377192679D82D00C84584 /* Place.swift */; };
+		09A3771D2679D87C00C84584 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A3771C2679D87C00C84584 /* MapViewModel.swift */; };
+		09A377202679DFEC00C84584 /* MapLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A3771F2679DFEC00C84584 /* MapLocation.swift */; };
 		09A424A52672AA700087AE1F /* SpeedCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A424A42672AA700087AE1F /* SpeedCalculatorModel.swift */; };
 		09F7F23226668E7D000FEAD9 /* CurrencyCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F7F23126668E7D000FEAD9 /* CurrencyCalculatorModel.swift */; };
 		350D44E1265BCA740008C02F /* ReiseappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D44E0265BCA740008C02F /* ReiseappApp.swift */; };
@@ -37,6 +41,10 @@
 		092469D3266027DB00EF8B3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0957AB892660382700FC86F6 /* CurrencyCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCalculator.swift; sourceTree = "<group>"; };
 		099C00652670D68300B46E0C /* ConversionConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionConvert.swift; sourceTree = "<group>"; };
+		09A377162679D72700C84584 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		09A377192679D82D00C84584 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		09A3771C2679D87C00C84584 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		09A3771F2679DFEC00C84584 /* MapLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocation.swift; sourceTree = "<group>"; };
 		09A424A42672AA700087AE1F /* SpeedCalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedCalculatorModel.swift; sourceTree = "<group>"; };
 		09F7F23126668E7D000FEAD9 /* CurrencyCalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCalculatorModel.swift; sourceTree = "<group>"; };
 		350D44DD265BCA740008C02F /* Reiseapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reiseapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +85,7 @@
 				09F7F23126668E7D000FEAD9 /* CurrencyCalculatorModel.swift */,
 				359BEA962670D1E700564AC7 /* MeasurementCalculatorModel.swift */,
 				09A424A42672AA700087AE1F /* SpeedCalculatorModel.swift */,
+				09A377192679D82D00C84584 /* Place.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -84,6 +93,7 @@
 		094DBAAA2660153600877E51 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				09A3771C2679D87C00C84584 /* MapViewModel.swift */,
 				092469CE26601ADD00EF8B3A /* FetchCurrencyData.swift */,
 			);
 			path = ViewModel;
@@ -97,6 +107,8 @@
 				35C877AE265C2A42002A98C7 /* SpeedCalculator.swift */,
 				35C877B0265C2BB2002A98C7 /* TipCalculator.swift */,
 				0957AB892660382700FC86F6 /* CurrencyCalculator.swift */,
+				09A377162679D72700C84584 /* MapView.swift */,
+				09A3771F2679DFEC00C84584 /* MapLocation.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,12 +261,16 @@
 				35C877AD265C26F0002A98C7 /* SettingsTab.swift in Sources */,
 				092469CF26601ADD00EF8B3A /* FetchCurrencyData.swift in Sources */,
 				350D44E1265BCA740008C02F /* ReiseappApp.swift in Sources */,
+				09A3771A2679D82D00C84584 /* Place.swift in Sources */,
 				099C00662670D68300B46E0C /* ConversionConvert.swift in Sources */,
 				09F7F23226668E7D000FEAD9 /* CurrencyCalculatorModel.swift in Sources */,
 				092469CC26601A1100EF8B3A /* CurrencyRate.swift in Sources */,
 				35C877A9265C0349002A98C7 /* CalculatorTab.swift in Sources */,
+				09A3771D2679D87C00C84584 /* MapViewModel.swift in Sources */,
 				35C877AF265C2A42002A98C7 /* SpeedCalculator.swift in Sources */,
+				09A377172679D72700C84584 /* MapView.swift in Sources */,
 				35C877B3265C2BEE002A98C7 /* MeasurementCalculator.swift in Sources */,
+				09A377202679DFEC00C84584 /* MapLocation.swift in Sources */,
 				35C877B1265C2BB2002A98C7 /* TipCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

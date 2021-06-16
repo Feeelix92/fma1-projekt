@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct LocationTab: View {
+    var layout = [GridItem(.flexible())]
     var body: some View {
-        Text("LocationTab")
+        NavigationView {
+            LazyVGrid(columns: layout, spacing: 10) {
+                NavigationLink(
+                    destination: MapLocation()) {
+                        CalculatorCard(image: "map", title: "Karte")
+                }
+                .buttonStyle(PlainButtonStyle())
+            }.padding(.horizontal)
+            .navigationTitle("Ziele")
+        }
     }
 }
 

@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct SettingsTab: View {
+struct DestinationTab: View {
     var body: some View {
-        Text("SettingsTab")
+        DestinationList()
     }
 }
 
-struct SettingsTab_Previews: PreviewProvider {
+struct DestinationTab_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsTab()
+        DestinationTab()
     }
 }

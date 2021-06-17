@@ -18,14 +18,14 @@ struct ContentView: View {
                 .tag(1)
             LocationTab()
                 .tabItem {
-                    Image(systemName: "location.fill")
-                    Text("Ziele")
+                    Image(systemName: "map.fill")
+                    Text("Karte")
                 }
                 .tag(2)
-            SettingsTab()
+            DestinationTab()
                 .tabItem {
-                    Image(systemName: "gear")
-                    Text("Einstellungen")
+                    Image(systemName: "location.fill")
+                    Text("Ziele")
                 }
                 .tag(3)
         }

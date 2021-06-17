@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Türkei",
+        "imageName": "turkey",
+        "description": "Die türkische Riviera gehört zu den beliebtesten Destinationen der Türkei. Deutsche Touristen führt es jährlich an die Strände und in die Hotels von Side, Antalya, Alanya und Kemer. Vor allem Pauschalurlauber, die tagsüber Ruhe und Erholung am Pool oder Meer suchen, gutes Essen genießen möchten und abends in den Städten das Feilschen mit den Händlern perfektionieren möchten, finden in der Türkei das perfekte Urlaubsziel."
+    },
+    {
+        "id": 2,
+        "name": "Ägypten",
+        "imageName": "egypt",
+        "description": "Über 6.000 Jahre alte Kulturgeschichte und historische Sehenswürdigkeiten längst vergangener Zeiten ziehen jährlich zahlreiche Touristen in die facettenreichen Ferienregionen Ägyptens. So zeugen Städte wie Kairo oder Luxor von den historischen Ereignissen des Landes und auch in einzigartigen Bauwerken wie den Pyramiden von Gizeh stecken Jahrhunderte voller Geschichte. Aufgrund ihrer bunten Unterwasserwelt und den beeindruckenden Riffen sind die Küsten des Landes außerdem auch bei Tauchern hoch im Kurs. Gleichzeitig eignen sich die weitläufigen Sandstrände perfekt für einen Badeurlaub unter der ägyptischen Sonne."
+    },
+    {
+        "id": 3,
+        "name": "Kroatien",
+        "imageName": "croatia",
+        "description": "Kristallklares Wasser, malerische Buchten, artenreiche Nationalparks, beeindruckende historische Architektur und zahlreiche Inseln, die erkundet werden möchten: Das Land an der Adria ist facettenreich und punktet mit einem super Klima und tollen Urlaubsdestinationen."
+    },
+    {
+        "id": 4,
+        "name": "Mallorca",
+        "imageName": "mallorca",
+        "description": "Auch wenn Mallorca meistens mit der Region rund um den Ballermann und Massentourismus verbunden wird, gehören Mallorcas Landschaften zu den schönsten des Mittelmeerraumes. Freut Euch auf majestätische Kalksteinklippen, türkisblaues Meer, weite Ebenen von Mandelbäumen und Weinreben, fantastische Wanderwege durch abwechslungsreiche Naturräume und die beeindruckende Architektur und den Charme der Hauptstadt Palma."
+    },
+    {
+        "id": 5,
+        "name": "Griechenland",
+        "imageName": "greece",
+        "description": "Griechenland gehört zu den beliebtesten Urlaubszielen. Sonnenanbeter, Hobbyhistoriker und Inselhopper kommen im Land von Zeus, Hermes und Aphrodite voll auf ihre Kosten. Nicht umsonst zählen die Lagunen und Buchten Griechenlands zur europäischen Karibik. Aufgrund der Entfernung eignet sich Griechenland zudem bestens für einen Städtetrip."
+    },
+    {
+        "id": 6,
+        "name": "Thailand",
+        "imageName": "thailand",
+        "description": "Thailand gehört zu den angesagtesten Reisedestinationen weltweit. Die faszinierende Kultur, die atemberaubende Landschaft, die traumhaften Strände, der dichte Dschungel und die Gastfreundschaft der Thais sprechen für sich."
+    },
+    {
+        "id": 7,
+        "name": "Spanien",
+        "imageName": "spain",
+        "description": "Tapas, Flamenco und Stierkampf: Wer glaubt, dass sich die spanische Kultur so einfach herunterbrechen lässt, liegt eindeutig falsch. Fakt ist: Tapas sind ein regionales Gericht aus Katalonien, der Flamenco stammt aus Andalusien und vom Stierkampf distanzieren sich die meisten Bewohner Spaniens, allen voran die Kanarischen Inseln, die den Stierkampf seit 1991 verboten haben. Das Land ist so vielseitig wie seine Geschichte und lockt ganzjährig mit milden Temperaturen Sonnenanbeter, Hobby-Historiker und Sightseeing-Begeisterte auf ihre Inseln und ihr Festland."
+    },
+    {
+        "id": 8,
+        "name": "Italien",
+        "imageName": "italy",
+        "description": "Italien unterteilt sich aufgrund seiner langgezogenen Stiefelform in Nord- und Südrichtung in unterschiedliche Klimaregionen: Die Alpenregion im Norden mit einem hochalpinen Klima und einer langen Skisaison im Winter und milderes, mediterranes Klima im Alpenvorland in Südtirol, in der Po-Ebene und an den oberitalienischen Seen, wie dem Gardasee. In Zentralitalien und im Landesinneren kann es im Winter sogar zu Schneefällen kommen, wohingegen die Sommer angenehm warm sind. Richtung Süden wird es zunehmende heißer. Das italienische Festland ist vor allem für Fans von Sightseeingtrips ein attraktives Reiseziel. Jede Stadt bietet beeindruckende Sehenswürdigkeiten und entführt mit ihrer Architektur in historische Zeiten. Die Küstenregion der Abruzzen bietet dagegen ein vielfältiges Programm für Sonnenhungrige und Aktivurlauber. Über 200 Inseln zählt das italienische Staatsgebiet. Die Anzahl variiert tatsächlich, da die durch Eruption eines Unterwasservulkans entstandenen kleinen Eilande nach geraumer Zeit wieder vom Wasser verschluckt werden. Von touristischem Interesse sind deshalb vor allem die größeren, bewohnten Inseln. Zu den größten und beliebtesten Inseln zählen definitiv Sizilien und Sardinien. Sizilien ist tatsächlich die größte Insel im Mittelmeer, dicht gefolgt von Sardinien."
+    },
+    {
+        "id": 9,
+        "name": "Portugal",
+        "imageName": "portugal",
+        "description": "Das Land auf der Iberischen Halbinsel eignet sich hervorragend für einen Städtetrip nach Lissabon oder Porto, einen Strandurlaub an der Algarve, einen Aktivurlaub auf den Azoren oder einen Roadtrip quer durch die abwechslungsreiche Landschaft."
+    },
+    {
+        "id": 10,
+        "name": "Frankreich",
+        "imageName": "france",
+        "description": "Frankreich, mon amour! Kein anderes Land ist für seine kulinarischen Spezialitäten so bekannt wie Frankreich: Krosse Baguettes, buttrige Croissants und exzellenter Wein sind nicht die einzigen Errungenschaften, die es weit über die Landesgrenzen hinaus geschafft haben. Doch genau so wenig, wie Frankreich auf seine Hauptstadt Paris verkürzt werden kann, würde es ausreichen, das Land auf seine kulinarischen Einflüsse zu beschränken. Es bietet interessante Großstadtmetropolen für einen Kurztrip, beeindruckende Landschaften für einen Roadtrip und traumhafte Strände für einen Sommerurlaub."
+    },
+    {
+        "id": 11,
+        "name": "Philippinen",
+        "imageName": "philippines",
+        "description": "Die Philippinen und ihre zahlreichen Inseln sind ein echtes Paradies für Strandurlauber. Nahezu auf jeder Insel findet Ihr wunderschöne Traumstrände mit feinem Sand und türkisblauem Wasser. Dabei haben vor allem auch die kleineren Inseln noch zahlreiche Strände zu bieten, die nicht von Touristen überlaufen sind. Viele Strände auf den Philippinen überzeugen mit einer einzigartigen Kulisse, egal ob von Palmen gesäumt oder von Felsen umgeben."
+    },
+    {
+        "id": 12,
+        "name": "Kanada",
+        "imageName": "canada",
+        "description": "Zu den bekanntesten Highlights Kanadas zählen sicherlich die modernen und kulturell vielfältigen Metropolen Vancouver und Toronto, die französisches Flair ausstrahlenden Städte Quebec und Montreal und die abwechslungsreiche Natur: Von schneebedeckten Gipfeln im Yukon bis hin zu grünen Regenwäldern auf Vancouver Island. Von Bergzügen der Rocky Mountains bis hin zu kleinen Inseln im Sankt Lorenz Strom. Darüber hinaus gibt es noch viele weniger besuchte Gegenden, in denen Sie bei während Ihrer Reise fast unentdeckte landschaftliche Schätze erleben und der lokalen Bevölkerung authentisch begegnen können. In den entlegenen Bergen Alaskas kommen Sie mit den Gastgebern und anderen Gästen der Lodge zum Nachmittagstee zusammen und tauschen Geschichten und Erfahrungen aus. Und wenn Sie am Ende Ihres Urlaubs einfach die Seele baumeln lassen möchten, so geht das im Okanagan Valley im Westen Kanadas bei einem Glas Wein aus den Weinbergen Ihrer Gastgeber ebenso gut wie am langen Sandstrand auf Prince Edward Island im Osten."
+    }
+]

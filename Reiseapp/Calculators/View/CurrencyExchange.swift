@@ -116,9 +116,7 @@ struct CurrencyExchange: View {
                         }
                     }
                 }
-                // test
-                // .background(Color.green)
-                .padding(.top, 10)
+                .padding(.horizontal)
                 .padding(.top, searchQuery == "" ? titleBarHeight: 90)
                 // Get Offset by geometry reader
                 .overlay(

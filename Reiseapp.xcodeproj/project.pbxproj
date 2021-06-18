@@ -85,6 +85,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		091D528B267C76F400CA441D /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				091D528C267C76FF00CA441D /* Model */,
+				091D528D267C770800CA441D /* View */,
+				091D528E267C771100CA441D /* ViewModel */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		091D528C267C76FF00CA441D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				09A377192679D82D00C84584 /* Place.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		091D528D267C770800CA441D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				09A377162679D72700C84584 /* MapView.swift */,
+				09A3771F2679DFEC00C84584 /* MapLocation.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		091D528E267C771100CA441D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				09A3771C2679D87C00C84584 /* MapViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		094DBAA7266014D400877E51 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +130,6 @@
 				09F7F23126668E7D000FEAD9 /* CurrencyCalculatorModel.swift */,
 				359BEA962670D1E700564AC7 /* MeasurementCalculatorModel.swift */,
 				09A424A42672AA700087AE1F /* SpeedCalculatorModel.swift */,
-				09A377192679D82D00C84584 /* Place.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,7 +137,6 @@
 		094DBAAA2660153600877E51 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				09A3771C2679D87C00C84584 /* MapViewModel.swift */,
 				092469CE26601ADD00EF8B3A /* FetchCurrencyData.swift */,
 			);
 			path = ViewModel;
@@ -117,8 +150,6 @@
 				35C877AE265C2A42002A98C7 /* SpeedCalculator.swift */,
 				35C877B0265C2BB2002A98C7 /* TipCalculator.swift */,
 				0957AB892660382700FC86F6 /* CurrencyCalculator.swift */,
-				09A377162679D72700C84584 /* MapView.swift */,
-				09A3771F2679DFEC00C84584 /* MapLocation.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,6 +173,7 @@
 		350D44DF265BCA740008C02F /* Reiseapp */ = {
 			isa = PBXGroup;
 			children = (
+				091D528B267C76F400CA441D /* Map */,
 				3571A088267BA11A0003E170 /* Destinations */,
 				359BEA932670B6FB00564AC7 /* Components */,
 				35C877B7265C2C5E002A98C7 /* Tabs */,

@@ -61,7 +61,7 @@ struct SpeedCalculator: View {
             Spacer()
         }
         .padding()
-        .navigationBarTitle("Geschwindigkeitsrechner", displayMode: .inline)
+        .navigationBarTitle(LocalizedStringKey("speedCalculator"), displayMode: .inline)
     }
 }
 

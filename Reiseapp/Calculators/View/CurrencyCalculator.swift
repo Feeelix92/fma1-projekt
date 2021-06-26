@@ -81,9 +81,7 @@ struct CurrencyCalculator: View {
                 // Button Action
                 currencyCalc.currencyAmount = Double(currencyAmountTextField)!
                 currencyCalc.convert()
-                self.convertedCurrencyAmount = currencyCalc.convertedAmount
-                print("view: \(self.convertedCurrencyAmount)")
-                
+                self.convertedCurrencyAmount = currencyCalc.convertedAmount                
             }, label: {
                 Text("Calculate")
                     .font(.title2)

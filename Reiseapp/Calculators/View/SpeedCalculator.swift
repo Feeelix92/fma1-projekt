@@ -7,80 +7,77 @@
 
 import SwiftUI
 
+
 struct SpeedCalculator: View {
-    @State var fromValue = ""
-    @State var toValue = ""
-    @State var fromUnit = Speed.metersPerSecond
-    @State var toUnit = Speed.kilometersPerHour
+    @State private var isSpeedScrollExpanded = false
+    @State private var selectedSpeed = Speed.kmh
+    @State private var selectedSpeedTextField: String = ""
     
-    let speedCalculatorModel = SpeedCalculatorModel(fromValue: 0.0, toValue: 0.0, fromUnit: Speed.metersPerSecond.asUnit, toUnit: Speed.kilometersPerHour.asUnit)
-    
+    @StateObject var speedCalculator = SpeedCalculatorModel()
+
     var body: some View {
         VStack {
-                HStack(alignment: .top, spacing: 12) {
-                    VStack {
-                        TextField("", text: $fromValue)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .keyboardType(.decimalPad)
-                            .onChange(of: fromValue) {
-                                speedCalculatorModel.fromValue = Double($0) ?? 0.0
-                                speedCalculatorModel.calculate(direction: .Forward, fromUnit: fromUnit.asUnit, toUnit: toUnit.asUnit)
-                                toValue = String(speedCalculatorModel.toValue)
-                            }
-                        Text(LocalizedStringKey("from"))
-//                        DropDown(items: Speed.allCases, selectedIndex: $fromUnit)
-//                            .onChange(of: fromUnit) {
-//                                speedCalculatorModel.calculate(direction: .Forward, fromUnit: $0.asUnit, toUnit: toUnit.asUnit)
-//                                toValue = String(speedCalculatorModel.toValue)
-//                            }
+            HStack{
+                Text("Geschwindigkeit:")
+                    .frame(width: 170, alignment: .leading)
+                TextField("", text: $selectedSpeedTextField)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.decimalPad)
+                    .onChange(of: selectedSpeedTextField){ newValue in
+                        speedCalculator.currentSpeed = Double(self.selectedSpeedTextField)!
                     }
-                    Text("=").padding(6)
-                    VStack {
-                        TextField("", text: $toValue)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .keyboardType(.decimalPad)
-                            .onChange(of: toValue) {
-                                speedCalculatorModel.toValue = Double($0) ?? 0.0
-                                speedCalculatorModel.calculate(direction: .Backward, fromUnit: fromUnit.asUnit, toUnit: toUnit.asUnit)
-                                fromValue = String(speedCalculatorModel.fromValue)
-                            }
-                        Text(LocalizedStringKey("to"))
-//                        DropDown(items: Speed.allCases, selectedIndex: $toUnit)
-//                            .onChange(of: toUnit) {
-//                                speedCalculatorModel.calculate(direction: .Backward, fromUnit: fromUnit.asUnit, toUnit: $0.asUnit)
-//                                fromValue = String(speedCalculatorModel.fromValue)
-//                            }
-                    }
-                }
-                Spacer()
             }
-            .navigationBarTitle(LocalizedStringKey("speedCalculator"), displayMode: .inline)
-            .onAppear {
+            Picker("Ausgangseinheit", selection: $selectedSpeed){
+                ForEach(Speed.allCases){ speed in
+                    Text(speed.rawValue)
+                        .tag(speed)
+                }
+            }.onChange(of: selectedSpeed, perform: { (value) in
+                speedCalculator.selectedInputSpeed = selectedSpeed.asUnit
+                speedCalculator.convertSpeed()
+            })
+            .pickerStyle(SegmentedPickerStyle())
+            Divider()
+            Button(action: {
+                // Button Action
+                speedCalculator.currentSpeed = Double(selectedSpeedTextField) ?? 0.0
+                speedCalculator.selectedInputSpeed = selectedSpeed.asUnit
+                speedCalculator.convertSpeed()
+                    
+            }, label: {
+                Text("Calculate")
+                    .font(.title2)
+            })
+            Divider()
+            if  speedCalculator.converted{
+                VStack(spacing: 10) {
+                    Text(speedCalculator.metersPerSecond)
+                    Text(speedCalculator.kilometersPerHour)
+                    Text(speedCalculator.milesPerHour)
+                    Text(speedCalculator.knots)
+                }
                 
             }
-            .padding()
+            Spacer()
+        }
+        .padding()
+        .navigationBarTitle("Geschwindigkeitsrechner", displayMode: .inline)
     }
 }
 
-struct SpeedCalculator_Previews: PreviewProvider {
-    static var previews: some View {
-        SpeedCalculator()
-    }
-}
-
-
-enum Speed: String, CaseIterable {
-    case metersPerSecond, kilometersPerHour, milesPerHour, knots
+enum Speed: String, CaseIterable, Identifiable{
+    case  ms, kmh, mph, knoten
     
-    var asUnit: UnitSpeed {
-        switch self {
-        case .metersPerSecond:
+    var id: String{self.rawValue}
+    var asUnit: UnitSpeed{
+        switch self{
+        case .ms:
             return UnitSpeed.metersPerSecond
-        case .kilometersPerHour:
+        case .kmh:
             return UnitSpeed.kilometersPerHour
-        case .milesPerHour:
+        case .mph:
             return UnitSpeed.milesPerHour
-        case .knots:
+        case .knoten:
             return UnitSpeed.knots
         }
     }

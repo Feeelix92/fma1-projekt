@@ -8,37 +8,27 @@
 
 import Foundation
 
-class SpeedCalculatorModel {
-    var fromValue: Double
-    var toValue: Double
-    var fromUnit: UnitSpeed
-    var toUnit: UnitSpeed
-    
-    init(fromValue: Double, toValue: Double, fromUnit: UnitSpeed, toUnit: UnitSpeed) {
-        self.fromValue = fromValue
-        self.toValue = toValue
-        self.fromUnit = fromUnit
-        self.toUnit = toUnit
-    }
+class SpeedCalculatorModel: ObservableObject{
+    var currentSpeed: Double = 0.0
+    var selectedInputSpeed: UnitSpeed = .kilometersPerHour
+    let formatter = MeasurementFormatter()
+    @Published var metersPerSecond: String = "0.0"
+    @Published var kilometersPerHour: String = "0.0"
+    @Published var milesPerHour: String = "0.0"
+    @Published var knots: String = "0.0"
+    var converted = false
     
     var fromSpeed: Measurement<UnitSpeed> {
-        return Measurement(value: fromValue, unit: fromUnit)
+        return Measurement(value: currentSpeed, unit: selectedInputSpeed)
     }
     
-    var toSpeed: Measurement<UnitSpeed> {
-        return Measurement(value: toValue, unit: toUnit)
-    }
-    
-    func calculate(direction: Direction, fromUnit: UnitSpeed, toUnit: UnitSpeed) {
-        self.fromUnit = fromUnit
-        self.toUnit = toUnit
-        if direction == .Forward {
-            let convertedSpeed = fromSpeed.converted(to: toUnit)
-            toValue = convertedSpeed.value
-        } else {
-            let convertedSpeed = toSpeed.converted(to: fromUnit)
-            fromValue = convertedSpeed.value
-        }
+    func convertSpeed(){
+        formatter.unitOptions = [.providedUnit]
+        metersPerSecond = formatter.string(from: fromSpeed.converted(to: .metersPerSecond))
+        kilometersPerHour = formatter.string(from: fromSpeed.converted(to: .kilometersPerHour))
+        milesPerHour = formatter.string(from: fromSpeed.converted(to: .milesPerHour))
+        knots = formatter.string(from: fromSpeed.converted(to: .knots))
+        converted = true
     }
 }
 

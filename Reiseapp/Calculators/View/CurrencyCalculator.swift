@@ -76,6 +76,7 @@ struct CurrencyCalculator: View {
                     .frame(height: 150, alignment: .leading)
                 }
             }
+            Divider()
             Button(action: {
                 // Button Action
                 currencyCalc.currencyAmount = Double(currencyAmountTextField)!
@@ -85,9 +86,9 @@ struct CurrencyCalculator: View {
                 
             }, label: {
                 Text("Calculate")
+                    .font(.title2)
             })
             Text(String(format: "Umrechnungsbetrag: %0.2f", self.convertedCurrencyAmount))
-                .font(.subheadline)
             Divider()
             NavigationLink(
                 destination: CurrencyExchange().environmentObject(FetchCurrencyData(currencyBase: selectedCurrencyBase))) {

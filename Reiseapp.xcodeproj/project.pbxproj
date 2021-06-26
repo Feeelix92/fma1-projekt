@@ -22,6 +22,7 @@
 		350D44E1265BCA740008C02F /* ReiseappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D44E0265BCA740008C02F /* ReiseappApp.swift */; };
 		350D44E5265BCA750008C02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 350D44E4265BCA750008C02F /* Assets.xcassets */; };
 		350D44E8265BCA750008C02F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 350D44E7265BCA750008C02F /* Preview Assets.xcassets */; };
+		350DCB9C26872EC300505F4D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 350DCB9E26872EC300505F4D /* Localizable.strings */; };
 		353540C52664155E005255D5 /* TipCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353540C42664155E005255D5 /* TipCalculatorModel.swift */; };
 		3571A08D267BA1940003E170 /* DestinationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3571A08C267BA1940003E170 /* DestinationList.swift */; };
 		3571A091267BA2690003E170 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3571A090267BA2690003E170 /* Destination.swift */; };
@@ -57,6 +58,8 @@
 		350D44E4265BCA750008C02F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		350D44E7265BCA750008C02F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		350D44E9265BCA750008C02F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		350DCB9D26872EC300505F4D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		350DCB9F26872F0400505F4D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		353540C42664155E005255D5 /* TipCalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorModel.swift; sourceTree = "<group>"; };
 		3571A08C267BA1940003E170 /* DestinationList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationList.swift; sourceTree = "<group>"; };
 		3571A090267BA2690003E170 /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
@@ -183,6 +186,7 @@
 				350D44E4265BCA750008C02F /* Assets.xcassets */,
 				350D44E9265BCA750008C02F /* Info.plist */,
 				350D44E6265BCA750008C02F /* Preview Content */,
+				350DCB9E26872EC300505F4D /* Localizable.strings */,
 			);
 			path = Reiseapp;
 			sourceTree = "<group>";
@@ -292,6 +296,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 350D44D4265BCA740008C02F;
 			productRefGroup = 350D44DE265BCA740008C02F /* Products */;
@@ -309,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				350D44E8265BCA750008C02F /* Preview Assets.xcassets in Resources */,
+				350DCB9C26872EC300505F4D /* Localizable.strings in Resources */,
 				350D44E5265BCA750008C02F /* Assets.xcassets in Resources */,
 				3571A09B267BA60A0003E170 /* destinationData.json in Resources */,
 			);
@@ -353,11 +359,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		350DCB9E26872EC300505F4D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				350DCB9D26872EC300505F4D /* en */,
+				350DCB9F26872F0400505F4D /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		350D44EA265BCA750008C02F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -419,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

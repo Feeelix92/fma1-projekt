@@ -15,7 +15,7 @@ struct DropDown: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12, content: {
             HStack {
-                Text(selectedIndex.rawValue.capitalized).fontWeight(.heavy).foregroundColor(.white)
+                Text(LocalizedStringKey(selectedIndex.rawValue)).fontWeight(.heavy).foregroundColor(.white)
                 Image(systemName: expand ? "chevron.up" : "chevron.down").foregroundColor(.white)
             }.onTapGesture {
                 self.expand.toggle()
@@ -27,7 +27,7 @@ struct DropDown: View {
                             selectedIndex = item
                             self.expand.toggle()
                         }, label: {
-                            Text(item.rawValue.capitalized)
+                            Text(LocalizedStringKey(item.rawValue))
                         }).foregroundColor(.white)
                     }
                 }
@@ -42,8 +42,8 @@ struct DropDown: View {
 }
 
 struct DropDown_Previews: PreviewProvider {
-    @State static var selectedIndex = Length.kilometer
+    @State static var selectedIndex = Length.kilometers
     static var previews: some View {
-        DropDown(items: [.zentimeter, .meter, .kilometer], selectedIndex: $selectedIndex)
+        DropDown(items: [.centimeters, .meters, .kilometers], selectedIndex: $selectedIndex)
     }
 }

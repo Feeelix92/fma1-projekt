@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  Reiseapp
+
+  Created by Nicklas Düringer on 26.06.21.
+  
+*/
+"calculator" = "Calculator";
+"map" = "Map";
+"destinations" = "Destinations";
+"speed" = "Speed";
+"measurement" = "Measurement";
+"tip" = "Tip";
+"currency" = "Currency";
+"from" = "From";
+"to" = "To";
+"measurementCalculator" = "Measurement Calculator";
+"kilometers" = "kilometers";
+"meters" = "meters";
+"centimeters" = "centimeters";
+"millimeters" = "millimeters";
+"micrometers" = "micrometers";
+"nanometers" = "nanometers";
+"miles" = "miles";
+"yards" = "yards";
+"feet" = "feet";
+"inches" = "inches";
+"nauticalMiles" = "nautical miles";
+"speedCalculator" = "Speed Calculator";
+"metersPerSecond" = "m/s";
+"kilometersPerHour" = "km/h";
+"milesPerHour" = "mph";
+"knots" = "Knots";

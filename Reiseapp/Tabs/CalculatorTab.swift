@@ -14,27 +14,27 @@ struct CalculatorTab: View {
             LazyVGrid(columns: layout, spacing: 10) {
                 NavigationLink(
                     destination: SpeedCalculator()) {
-                    CalculatorCard(image: "speedometer", title: "Geschwindigkeit")
+                    CalculatorCard(image: "speedometer", title: "speed")
                 }
                 .buttonStyle(PlainButtonStyle())
                 NavigationLink(
                     destination: MeasurementCalculator()) {
-                    CalculatorCard(image: "ruler", title: "Länge")
+                    CalculatorCard(image: "ruler", title: "measurement")
                 }
                 .buttonStyle(PlainButtonStyle())
                 NavigationLink(
                     destination: TipCalculator()) {
-                    CalculatorCard(image: "wallet.pass", title: "Trinkgeld")
+                    CalculatorCard(image: "wallet.pass", title: "tip")
                 }
                 .buttonStyle(PlainButtonStyle())
                 NavigationLink(
                     destination: CurrencyCalculator()) {
-                    CalculatorCard(image: "banknote", title: "Währung")
+                    CalculatorCard(image: "banknote", title: "currency")
                 }
                 .buttonStyle(PlainButtonStyle())
                   }
                   .padding(.horizontal)
-            .navigationTitle("Rechner")
+            .navigationTitle(LocalizedStringKey("calculator"))
         }
     }
 }
@@ -59,7 +59,7 @@ struct CalculatorCard: View {
                 .padding(.all, 20)
                 .foregroundColor(.accentColor)
             
-            Text(title)
+            Text(LocalizedStringKey(title))
                 .font(.title2)
                 .fontWeight(.bold)
             Spacer()

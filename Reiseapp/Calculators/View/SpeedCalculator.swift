@@ -27,7 +27,7 @@ struct SpeedCalculator: View {
                                 speedCalculatorModel.calculate(direction: .Forward, fromUnit: fromUnit.asUnit, toUnit: toUnit.asUnit)
                                 toValue = String(speedCalculatorModel.toValue)
                             }
-                        Text("Von")
+                        Text(LocalizedStringKey("from"))
 //                        DropDown(items: Speed.allCases, selectedIndex: $fromUnit)
 //                            .onChange(of: fromUnit) {
 //                                speedCalculatorModel.calculate(direction: .Forward, fromUnit: $0.asUnit, toUnit: toUnit.asUnit)
@@ -44,7 +44,7 @@ struct SpeedCalculator: View {
                                 speedCalculatorModel.calculate(direction: .Backward, fromUnit: fromUnit.asUnit, toUnit: toUnit.asUnit)
                                 fromValue = String(speedCalculatorModel.fromValue)
                             }
-                        Text("Nach")
+                        Text(LocalizedStringKey("to"))
 //                        DropDown(items: Speed.allCases, selectedIndex: $toUnit)
 //                            .onChange(of: toUnit) {
 //                                speedCalculatorModel.calculate(direction: .Backward, fromUnit: fromUnit.asUnit, toUnit: $0.asUnit)
@@ -54,7 +54,7 @@ struct SpeedCalculator: View {
                 }
                 Spacer()
             }
-            .navigationBarTitle("Geschwindigkeitsrechner", displayMode: .inline)
+            .navigationBarTitle(LocalizedStringKey("speedCalculator"), displayMode: .inline)
             .onAppear {
                 
             }

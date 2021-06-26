@@ -10,10 +10,10 @@ import SwiftUI
 struct MeasurementCalculator: View {
     @State var fromValue = ""
     @State var toValue = ""
-    @State var fromUnit = Length.meter
-    @State var toUnit = Length.kilometer
+    @State var fromUnit = Length.meters
+    @State var toUnit = Length.kilometers
     
-    let measurementCalculatorModel = MeasurementCalculatorModel(fromValue: 0.0, toValue: 0.0, fromUnit: Length.meter.asUnit, toUnit: Length.kilometer.asUnit)
+    let measurementCalculatorModel = MeasurementCalculatorModel(fromValue: 0.0, toValue: 0.0, fromUnit: Length.meters.asUnit, toUnit: Length.kilometers.asUnit)
     
     var body: some View {
         VStack {
@@ -27,7 +27,7 @@ struct MeasurementCalculator: View {
                                 measurementCalculatorModel.calculate(direction: .Forward, fromUnit: fromUnit.asUnit, toUnit: toUnit.asUnit)
                                 toValue = String(measurementCalculatorModel.toValue)
                             }
-                        Text("Von")
+                        Text(LocalizedStringKey("from"))
                         DropDown(items: Length.allCases, selectedIndex: $fromUnit)
                             .onChange(of: fromUnit) {
                                 measurementCalculatorModel.calculate(direction: .Forward, fromUnit: $0.asUnit, toUnit: toUnit.asUnit)
@@ -44,7 +44,7 @@ struct MeasurementCalculator: View {
                                 measurementCalculatorModel.calculate(direction: .Backward, fromUnit: fromUnit.asUnit, toUnit: toUnit.asUnit)
                                 fromValue = String(measurementCalculatorModel.fromValue)
                             }
-                        Text("Nach")
+                        Text(LocalizedStringKey("to"))
                         DropDown(items: Length.allCases, selectedIndex: $toUnit)
                             .onChange(of: toUnit) {
                                 measurementCalculatorModel.calculate(direction: .Backward, fromUnit: fromUnit.asUnit, toUnit: $0.asUnit)
@@ -54,7 +54,7 @@ struct MeasurementCalculator: View {
                 }
                 Spacer()
             }
-            .navigationBarTitle("Längenrechner", displayMode: .inline)
+            .navigationBarTitle(LocalizedStringKey("measurementCalculator"), displayMode: .inline)
             .onAppear {
                 
             }
@@ -70,31 +70,31 @@ struct MeasurementCalculator_Previews: PreviewProvider {
 
 
 enum Length: String, CaseIterable {
-    case kilometer, meter, zentimeter, millimeter, mikrometer, nanometer, meile, yard, fuß, zoll, seemeile
+    case kilometers, meters, centimeters, millimeters, micrometers, nanometers, miles, yards, feet, inches, nauticalMiles
     
     var asUnit: UnitLength {
         switch self {
-        case .kilometer:
+        case .kilometers:
             return UnitLength.kilometers
-        case .meter:
+        case .meters:
             return UnitLength.meters
-        case .zentimeter:
+        case .centimeters:
             return UnitLength.centimeters
-        case .millimeter:
+        case .millimeters:
             return UnitLength.millimeters
-        case .mikrometer:
+        case .micrometers:
             return UnitLength.micrometers
-        case .nanometer:
+        case .nanometers:
             return UnitLength.nanometers
-        case .meile:
+        case .miles:
             return UnitLength.miles
-        case .yard:
+        case .yards:
             return UnitLength.yards
-        case .fuß:
+        case .feet:
             return UnitLength.feet
-        case .zoll:
+        case .inches:
             return UnitLength.inches
-        case .seemeile:
+        case .nauticalMiles:
             return UnitLength.nauticalMiles
         }
     }

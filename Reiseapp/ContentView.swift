@@ -13,19 +13,19 @@ struct ContentView: View {
             CalculatorTab()
                 .tabItem {
                     Image(systemName: "x.squareroot")
-                    Text("Rechner")
+                    Text(LocalizedStringKey("calculator"))
                 }
                 .tag(1)
             LocationTab()
                 .tabItem {
                     Image(systemName: "map.fill")
-                    Text("Karte")
+                    Text(LocalizedStringKey("map"))
                 }
                 .tag(2)
             DestinationTab()
                 .tabItem {
                     Image(systemName: "location.fill")
-                    Text("Ziele")
+                    Text(LocalizedStringKey("destinations"))
                 }
                 .tag(3)
         }

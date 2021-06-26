@@ -31,3 +31,8 @@
 "kilometersPerHour" = "km/h";
 "milesPerHour" = "mph";
 "knots" = "Knoten";
+"calculate" = "berechnen";
+"amount" = "Betrag";
+"tipCalculator" = "Trinkgeldrechner";
+"currencyCalculator" = "Währungsrechner";
+"targetCurrency" = "Zielwährung";

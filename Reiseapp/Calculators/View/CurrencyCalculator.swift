@@ -25,7 +25,7 @@ struct CurrencyCalculator: View {
         VStack{
             VStack{
                 HStack{
-                    Text("Betrag:")
+                    Text(LocalizedStringKey("amount"))
                         .frame(width: 170, alignment: .leading)
                     TextField("", text: $currencyAmountTextField)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -83,7 +83,7 @@ struct CurrencyCalculator: View {
                 currencyCalc.convert()
                 self.convertedCurrencyAmount = currencyCalc.convertedAmount                
             }, label: {
-                Text("Calculate")
+                Text(LocalizedStringKey("calculate"))
                     .font(.title2)
             })
             Text(String(format: "Umrechnungsbetrag: %0.2f", self.convertedCurrencyAmount))
@@ -96,7 +96,7 @@ struct CurrencyCalculator: View {
             Spacer()
         }
         .padding()
-        .navigationBarTitle("Währungsrechner", displayMode: .inline)
+        .navigationBarTitle(LocalizedStringKey("currencyCalculator"), displayMode: .inline)
         .onAppear {
             currencyAmountTextField = String(format: "%0.2f", currencyCalc.currencyAmount)
         }

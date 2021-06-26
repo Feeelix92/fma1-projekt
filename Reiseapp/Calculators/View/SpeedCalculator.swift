@@ -18,8 +18,8 @@ struct SpeedCalculator: View {
     var body: some View {
         VStack {
             HStack{
-                Text("Geschwindigkeit:")
-                    .frame(width: 170, alignment: .leading)
+                Text(LocalizedStringKey("speed"))
+                    .frame(width: 120, alignment: .leading)
                 TextField("", text: $selectedSpeedTextField)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.decimalPad)
@@ -45,7 +45,7 @@ struct SpeedCalculator: View {
                 speedCalculator.convertSpeed()
                     
             }, label: {
-                Text("Calculate")
+                Text(LocalizedStringKey("calculate"))
                     .font(.title2)
             })
             Divider()
@@ -66,7 +66,7 @@ struct SpeedCalculator: View {
 }
 
 enum Speed: String, CaseIterable, Identifiable{
-    case  ms, kmh, mph, knoten
+    case  ms, kmh, mph, knots
     
     var id: String{self.rawValue}
     var asUnit: UnitSpeed{
@@ -77,7 +77,7 @@ enum Speed: String, CaseIterable, Identifiable{
             return UnitSpeed.kilometersPerHour
         case .mph:
             return UnitSpeed.milesPerHour
-        case .knoten:
+        case .knots:
             return UnitSpeed.knots
         }
     }

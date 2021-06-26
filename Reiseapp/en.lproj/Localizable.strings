@@ -31,3 +31,9 @@
 "kilometersPerHour" = "km/h";
 "milesPerHour" = "mph";
 "knots" = "Knots";
+"calculate" = "calculate";
+"amount" = "Amount";
+"tipCalculator" = "Tip Calculator";
+"currencyCalculator" = "Currency Calculator";
+"targetCurrency" = "Target Currency";
+

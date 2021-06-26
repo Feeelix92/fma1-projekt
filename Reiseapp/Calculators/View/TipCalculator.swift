@@ -41,7 +41,7 @@ struct TipCalculator: View {
                 sortedKeys = possibleTips.keys.sorted()
                 
             }, label: {
-                Text("Calculate")
+                Text(LocalizedStringKey("calculate"))
             })
             
             List { ForEach(sortedKeys, id: \.self) {key in
@@ -57,11 +57,11 @@ struct TipCalculator: View {
                 
             }
             }
-            .padding(/*@START_MENU_TOKEN@*/[.top, .bottom, .trailing]/*@END_MENU_TOKEN@*/)
+            .padding([.top, .bottom, .trailing])
             Spacer()
         }
         .padding()
-        .navigationBarTitle("Tip Calculator", displayMode: .inline)
+        .navigationBarTitle(LocalizedStringKey("tipCalculator"), displayMode: .inline)
         .onAppear {
             totalTextField = String(format: "%0.2f", tipCalc.total)
             taxPctSlider = Double(tipCalc.taxPct) * 100.0

@@ -19,7 +19,7 @@ struct SpeedCalculator: View {
         VStack {
             HStack{
                 Text(LocalizedStringKey("speed"))
-                    .frame(width: 120, alignment: .leading)
+                    .frame(width: 150, alignment: .leading)
                 TextField("", text: $selectedSpeedTextField)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.decimalPad)

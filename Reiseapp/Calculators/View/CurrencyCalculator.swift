@@ -18,6 +18,7 @@ struct CurrencyCalculator: View {
     @State private var convertedCurrencyAmount = 0.0
 
     @State private var currencyAmountTextField = ""
+    let tC = String(format: NSLocalizedString("targetCurrency", comment: ""))
     
     @StateObject var currencyCalc = CurrencyCalculatorModel(currencyBase: "EUR", currencyOutput: "USD", currencyAmount: 33.25)
     
@@ -55,7 +56,7 @@ struct CurrencyCalculator: View {
                     }
                     .frame(height: 150, alignment: .leading)
                 }
-                DisclosureGroup("Zielwährung: \(selectedCurrencyOutput)", isExpanded: $isCurrencyOutputScrollExpanded) {
+                DisclosureGroup( "\(tC): \(selectedCurrencyOutput)", isExpanded: $isCurrencyOutputScrollExpanded) {
                     ScrollView{
                         VStack{
                             ForEach(viewModel.conversionData) { rate in

@@ -11,7 +11,7 @@ struct DestinationList: View {
                     DestinationRow(destination: destination)
                 }
             }
-            .navigationTitle("Ziele")
+            .navigationTitle(LocalizedStringKey("destinations"))
         }
     }
 }

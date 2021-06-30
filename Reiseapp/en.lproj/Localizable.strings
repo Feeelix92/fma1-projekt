@@ -5,7 +5,7 @@
   Created by Nicklas Düringer on 26.06.21.
   
 */
-"calculator" = "Calculator";
+"calculator" = "Calculators";
 "map" = "Map";
 "destinations" = "Destinations";
 "speed" = "Speed";
@@ -15,25 +15,37 @@
 "from" = "From";
 "to" = "To";
 "measurementCalculator" = "Measurement Calculator";
-"kilometers" = "kilometers";
-"meters" = "meters";
-"centimeters" = "centimeters";
-"millimeters" = "millimeters";
-"micrometers" = "micrometers";
-"nanometers" = "nanometers";
-"miles" = "miles";
-"yards" = "yards";
-"feet" = "feet";
-"inches" = "inches";
-"nauticalMiles" = "nautical miles";
+"kilometers" = "Kilometers";
+"meters" = "Meters";
+"centimeters" = "Centimeters";
+"millimeters" = "Millimeters";
+"micrometers" = "Micrometers";
+"nanometers" = "Nanometers";
+"miles" = "Miles";
+"yards" = "Yards";
+"feet" = "Feet";
+"inches" = "Inches";
+"nauticalMiles" = "Nautical miles";
 "speedCalculator" = "Speed Calculator";
 "metersPerSecond" = "m/s";
 "kilometersPerHour" = "km/h";
 "milesPerHour" = "mph";
-"knots" = "Knots";
-"calculate" = "calculate";
+"knots" = "knots";
+"calculate" = "Calculate";
 "amount" = "Amount";
 "tipCalculator" = "Tip Calculator";
 "currencyCalculator" = "Currency Calculator";
-"targetCurrency" = "Target Currency";
+"targetCurrency" = "Target currency";
+"baseCurrency" = "Base currency";
+"search" = "Search";
+"accessDenied" = "Access denied";
+"allowAccess" = "Please allow access in your settings";
+"settings" = "Settings";
+"noName" = "No name";
+"conversionAmount" = "Conversion amount";
+"exchangeRates" = "Exchange rates";
+"baseUnit" = "Base unit";
+"billTotal" = "Bill Total (Post-Tax):";
+"taxPercentage" = "Tax Percentage";
+"total" = "Total";
 

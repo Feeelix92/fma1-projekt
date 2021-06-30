@@ -14,18 +14,22 @@ struct TipCalculator: View {
     @State var sortedKeys: [Int] = []
     let tipCalc = TipCalculatorModel(total: 33.25, taxPct: 0.06)
     
+    let taxPercentage = String(format: NSLocalizedString("taxPercentage", comment: ""))
+    let tip = String(format: NSLocalizedString("tip", comment: ""))
+    let total = String(format: NSLocalizedString("total", comment: ""))
+    
     
     var body: some View {
         VStack {
             HStack {
-                Text("Bill Total (Post-Tax):")
+                Text(LocalizedStringKey("billTotal"))
                     .frame(width: 170, alignment: .leading)
                 TextField("", text: $totalTextField)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.decimalPad)
             }
             HStack {
-                Text("Tax Percentage (\(Int(taxPctSlider))%)")
+                Text("\(taxPercentage) (\(Int(taxPctSlider))%)")
                     .frame(width: 170, alignment: .leading)
                 Spacer()
                 Slider(value: $taxPctSlider, in: 0...10, step: 1, onEditingChanged: { editing in
@@ -49,7 +53,7 @@ struct TipCalculator: View {
                 HStack {
                     Text("\(key)%:")
                         .font(.headline)
-                    Text(String(format: "Tip: $%0.2f, Total: $%0.2f", tipAmt, total))
+                    Text("\(tip): " + String(format: "$%0.2f, ", tipAmt) + "\(self.total): " + String(format: "$%0.2f", total))
                         .font(.subheadline)
                     
                 }

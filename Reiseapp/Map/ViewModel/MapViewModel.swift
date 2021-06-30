@@ -49,7 +49,7 @@ class MapViewModel: NSObject,ObservableObject,CLLocationManagerDelegate{
         guard let coordinate = place.placemark.location?.coordinate else{return}
         let pointAnnotation = MKPointAnnotation()
         pointAnnotation.coordinate = coordinate
-        pointAnnotation.title = place.placemark.name ?? "Kein Name"
+        pointAnnotation.title = place.placemark.name ?? "noName"
         
         mapView.removeAnnotations(mapView.annotations)
         mapView.addAnnotation(pointAnnotation)

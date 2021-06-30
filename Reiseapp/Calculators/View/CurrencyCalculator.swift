@@ -19,6 +19,9 @@ struct CurrencyCalculator: View {
 
     @State private var currencyAmountTextField = ""
     let tC = String(format: NSLocalizedString("targetCurrency", comment: ""))
+    let bC = String(format: NSLocalizedString("baseCurrency", comment: ""))
+    let conversionAmount = String(format: NSLocalizedString("conversionAmount", comment: ""))
+    let exchangeRates = String(format: NSLocalizedString("exchangeRates", comment: ""))
     
     @StateObject var currencyCalc = CurrencyCalculatorModel(currencyBase: "EUR", currencyOutput: "USD", currencyAmount: 33.25)
     
@@ -36,7 +39,7 @@ struct CurrencyCalculator: View {
                             currencyCalc.convert()
                         }
                 }
-                DisclosureGroup("Ausgangswährung: \(selectedCurrencyBase)", isExpanded: $isCurrencyBaseScrollExpanded) {
+                DisclosureGroup("\(bC): \(selectedCurrencyBase)", isExpanded: $isCurrencyBaseScrollExpanded) {
                     ScrollView{
                         VStack{
                             ForEach(viewModel.conversionData) { rate in
@@ -87,11 +90,11 @@ struct CurrencyCalculator: View {
                 Text(LocalizedStringKey("calculate"))
                     .font(.title2)
             })
-            Text(String(format: "Umrechnungsbetrag: %0.2f", self.convertedCurrencyAmount))
+            Text("\(conversionAmount): " + String(format: "%0.2f", self.convertedCurrencyAmount))
             Divider()
             NavigationLink(
                 destination: CurrencyExchange().environmentObject(FetchCurrencyData(currencyBase: selectedCurrencyBase))) {
-                CalculatorCard(image: "banknote", title: "Wechselkurse \(selectedCurrencyBase)")
+                CalculatorCard(image: "banknote", title: "\(exchangeRates) \(selectedCurrencyBase)")
             }
             .buttonStyle(PlainButtonStyle())
             Spacer()

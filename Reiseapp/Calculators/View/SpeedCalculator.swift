@@ -27,9 +27,9 @@ struct SpeedCalculator: View {
                         speedCalculator.currentSpeed = Double(self.selectedSpeedTextField)!
                     }
             }
-            Picker("Ausgangseinheit", selection: $selectedSpeed){
+            Picker("baseUnit", selection: $selectedSpeed){
                 ForEach(Speed.allCases){ speed in
-                    Text(speed.rawValue)
+                    Text(LocalizedStringKey(speed.rawValue))
                         .tag(speed)
                 }
             }.onChange(of: selectedSpeed, perform: { (value) in
@@ -66,7 +66,7 @@ struct SpeedCalculator: View {
 }
 
 enum Speed: String, CaseIterable, Identifiable{
-    case  ms, kmh, mph, knots
+    case  ms = "metersPerSecond", kmh = "kilometersPerHour", mph = "milesPerHour", knots = "knots"
     
     var id: String{self.rawValue}
     var asUnit: UnitSpeed{

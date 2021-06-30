@@ -29,12 +29,12 @@ struct CurrencyExchange: View {
         VStack{
             if searchQuery == ""{
                 HStack{
-                    (   Text("Wechselkurse ")
+                    (   Text(LocalizedStringKey("exchangeRates"))
                             .fontWeight(.bold)
                             .foregroundColor(.primary)
                         +
                             
-                        Text("\(viewModel.currencyBase!)")
+                        Text(" \(viewModel.currencyBase!)")
                             .foregroundColor(.gray)
                     )
                     .font(.largeTitle)
@@ -64,7 +64,7 @@ struct CurrencyExchange: View {
                     Image(systemName: "magnifyingglass")
                         .font(.system(size: 23, weight: .bold))
                         .foregroundColor(.gray)
-                    TextField("Search", text: $searchQuery)
+                    TextField(LocalizedStringKey("search"), text: $searchQuery)
                 }
                 .padding(.vertical, 10)
                 .padding(.horizontal)

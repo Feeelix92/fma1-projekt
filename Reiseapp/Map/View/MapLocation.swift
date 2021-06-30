@@ -23,7 +23,7 @@ struct MapLocation: View {
                     HStack{
                         Image(systemName: "magnifyingglass")
                             .foregroundColor(.primary)
-                        TextField("Suche", text: $mapData.searchTxt)
+                        TextField(LocalizedStringKey("search"), text: $mapData.searchTxt)
                             .colorScheme(.light)
                     }
                     .padding(.vertical, 10)
@@ -72,13 +72,13 @@ struct MapLocation: View {
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .padding()
             }
-        }.navigationBarTitle("Karte", displayMode: .inline)
+        }.navigationBarTitle(LocalizedStringKey("map"), displayMode: .inline)
         .onAppear(perform: {
             locationManager.delegate = mapData
             locationManager.requestWhenInUseAuthorization()
         })
         .alert(isPresented: $mapData.permissionDenied, content: {
-            Alert(title: Text("Zugriff verweigert"), message: Text("Bitte erlauben Sie den Zugriff in Ihren Einstellungen"), dismissButton: .default(Text("Zu den Einstellungen"), action: {
+            Alert(title: Text(LocalizedStringKey("accessDenied")), message: Text(LocalizedStringKey("allowAccess")), dismissButton: .default(Text(LocalizedStringKey("settings")), action: {
                 UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
             }))
         })

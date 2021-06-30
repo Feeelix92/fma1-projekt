@@ -9,7 +9,9 @@ struct DestinationRow: View {
             destination.image
                 .resizable()
                 .frame(width: 50, height: 50)
-            Text(destination.name)
+            if let currentLanguage = Locale.current.languageCode {
+                Text(currentLanguage == "de" ? destination.name_de : destination.name)
+            }
             Spacer()
         }
     }

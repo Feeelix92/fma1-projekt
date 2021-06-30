@@ -1,74 +1,98 @@
 [
     {
         "id": 1,
-        "name": "Türkei",
+        "name": "Turkey",
+        "name_de": "Türkei",
         "imageName": "turkey",
-        "description": "Die türkische Riviera gehört zu den beliebtesten Destinationen der Türkei. Deutsche Touristen führt es jährlich an die Strände und in die Hotels von Side, Antalya, Alanya und Kemer. Vor allem Pauschalurlauber, die tagsüber Ruhe und Erholung am Pool oder Meer suchen, gutes Essen genießen möchten und abends in den Städten das Feilschen mit den Händlern perfektionieren möchten, finden in der Türkei das perfekte Urlaubsziel."
+        "description": "The Turkish Riviera is one of the most popular destinations in Turkey. German tourists are drawn to the beaches and hotels of Side, Antalya, Alanya and Kemer every year. Especially package holidaymakers who are looking for rest and relaxation by the pool or sea during the day, want to enjoy good food and perfect haggling with the merchants in the cities in the evening, will find the perfect vacation destination in Turkey.",
+        "description_de": "Die türkische Riviera gehört zu den beliebtesten Destinationen der Türkei. Deutsche Touristen führt es jährlich an die Strände und in die Hotels von Side, Antalya, Alanya und Kemer. Vor allem Pauschalurlauber, die tagsüber Ruhe und Erholung am Pool oder Meer suchen, gutes Essen genießen möchten und abends in den Städten das Feilschen mit den Händlern perfektionieren möchten, finden in der Türkei das perfekte Urlaubsziel."
     },
     {
         "id": 2,
-        "name": "Ägypten",
+        "name": "Egypt",
+        "name_de": "Ägypten",
         "imageName": "egypt",
-        "description": "Über 6.000 Jahre alte Kulturgeschichte und historische Sehenswürdigkeiten längst vergangener Zeiten ziehen jährlich zahlreiche Touristen in die facettenreichen Ferienregionen Ägyptens. So zeugen Städte wie Kairo oder Luxor von den historischen Ereignissen des Landes und auch in einzigartigen Bauwerken wie den Pyramiden von Gizeh stecken Jahrhunderte voller Geschichte. Aufgrund ihrer bunten Unterwasserwelt und den beeindruckenden Riffen sind die Küsten des Landes außerdem auch bei Tauchern hoch im Kurs. Gleichzeitig eignen sich die weitläufigen Sandstrände perfekt für einen Badeurlaub unter der ägyptischen Sonne."
+        "description": "More than 6,000 years of cultural history and historical sights of times long past attract numerous tourists to the multifaceted vacation regions of Egypt every year. Cities such as Cairo or Luxor bear witness to the historical events of the country and unique buildings such as the pyramids of Giza also contain centuries of history. Due to their colorful underwater world and impressive reefs, the country's coasts are also very popular with divers. At the same time, the extensive sandy beaches are perfect for a beach vacation under the Egyptian sun.",
+        "description_de": "Über 6.000 Jahre alte Kulturgeschichte und historische Sehenswürdigkeiten längst vergangener Zeiten ziehen jährlich zahlreiche Touristen in die facettenreichen Ferienregionen Ägyptens. So zeugen Städte wie Kairo oder Luxor von den historischen Ereignissen des Landes und auch in einzigartigen Bauwerken wie den Pyramiden von Gizeh stecken Jahrhunderte voller Geschichte. Aufgrund ihrer bunten Unterwasserwelt und den beeindruckenden Riffen sind die Küsten des Landes außerdem auch bei Tauchern hoch im Kurs. Gleichzeitig eignen sich die weitläufigen Sandstrände perfekt für einen Badeurlaub unter der ägyptischen Sonne."
     },
     {
         "id": 3,
-        "name": "Kroatien",
+        "name": "Croatia",
+        "name_de": "Kroatien",
         "imageName": "croatia",
-        "description": "Kristallklares Wasser, malerische Buchten, artenreiche Nationalparks, beeindruckende historische Architektur und zahlreiche Inseln, die erkundet werden möchten: Das Land an der Adria ist facettenreich und punktet mit einem super Klima und tollen Urlaubsdestinationen."
+        "description": "Crystal-clear water, picturesque bays, species-rich national parks, impressive historical architecture and numerous islands that want to be explored: The country on the Adriatic Sea is multifaceted and scores with a super climate and great vacation destinations.",
+        "description_de": "Kristallklares Wasser, malerische Buchten, artenreiche Nationalparks, beeindruckende historische Architektur und zahlreiche Inseln, die erkundet werden möchten: Das Land an der Adria ist facettenreich und punktet mit einem super Klima und tollen Urlaubsdestinationen."
     },
     {
         "id": 4,
         "name": "Mallorca",
+        "name_de": "Mallorca",
         "imageName": "mallorca",
-        "description": "Auch wenn Mallorca meistens mit der Region rund um den Ballermann und Massentourismus verbunden wird, gehören Mallorcas Landschaften zu den schönsten des Mittelmeerraumes. Freut Euch auf majestätische Kalksteinklippen, türkisblaues Meer, weite Ebenen von Mandelbäumen und Weinreben, fantastische Wanderwege durch abwechslungsreiche Naturräume und die beeindruckende Architektur und den Charme der Hauptstadt Palma."
+        "description": "Even though Mallorca is mostly associated with the region around Ballermann and mass tourism, Mallorca's landscapes are among the most beautiful in the Mediterranean. Look forward to majestic limestone cliffs, turquoise sea, vast plains of almond trees and vines, fantastic hiking trails through varied natural areas and the impressive architecture and charm of the capital Palma.",
+        "description_de": "Auch wenn Mallorca meistens mit der Region rund um den Ballermann und Massentourismus verbunden wird, gehören Mallorcas Landschaften zu den schönsten des Mittelmeerraumes. Freut Euch auf majestätische Kalksteinklippen, türkisblaues Meer, weite Ebenen von Mandelbäumen und Weinreben, fantastische Wanderwege durch abwechslungsreiche Naturräume und die beeindruckende Architektur und den Charme der Hauptstadt Palma."
     },
     {
         "id": 5,
-        "name": "Griechenland",
+        "name": "Greece",
+        "name_de": "Griechenland",
         "imageName": "greece",
-        "description": "Griechenland gehört zu den beliebtesten Urlaubszielen. Sonnenanbeter, Hobbyhistoriker und Inselhopper kommen im Land von Zeus, Hermes und Aphrodite voll auf ihre Kosten. Nicht umsonst zählen die Lagunen und Buchten Griechenlands zur europäischen Karibik. Aufgrund der Entfernung eignet sich Griechenland zudem bestens für einen Städtetrip."
+        "description": "Greece is one of the most popular vacation destinations. Sun worshippers, amateur historians and island hoppers get their money's worth in the land of Zeus, Hermes and Aphrodite. It is not for nothing that the lagoons and bays of Greece belong to the European Caribbean. Due to the distance, Greece is also ideally suited for a city trip.",
+        "description_de": "Griechenland gehört zu den beliebtesten Urlaubszielen. Sonnenanbeter, Hobbyhistoriker und Inselhopper kommen im Land von Zeus, Hermes und Aphrodite voll auf ihre Kosten. Nicht umsonst zählen die Lagunen und Buchten Griechenlands zur europäischen Karibik. Aufgrund der Entfernung eignet sich Griechenland zudem bestens für einen Städtetrip."
     },
     {
         "id": 6,
         "name": "Thailand",
+        "name_de": "Thailand",
         "imageName": "thailand",
-        "description": "Thailand gehört zu den angesagtesten Reisedestinationen weltweit. Die faszinierende Kultur, die atemberaubende Landschaft, die traumhaften Strände, der dichte Dschungel und die Gastfreundschaft der Thais sprechen für sich."
+        "description": "Thailand is one of the hottest travel destinations in the world. The fascinating culture, the breathtaking landscape, the beautiful beaches, the dense jungle and the hospitality of the Thais speak for themselves.",
+        "description_de": "Thailand gehört zu den angesagtesten Reisedestinationen weltweit. Die faszinierende Kultur, die atemberaubende Landschaft, die traumhaften Strände, der dichte Dschungel und die Gastfreundschaft der Thais sprechen für sich."
     },
     {
         "id": 7,
-        "name": "Spanien",
+        "name": "Spain",
+        "name_de": "Spanien",
         "imageName": "spain",
-        "description": "Tapas, Flamenco und Stierkampf: Wer glaubt, dass sich die spanische Kultur so einfach herunterbrechen lässt, liegt eindeutig falsch. Fakt ist: Tapas sind ein regionales Gericht aus Katalonien, der Flamenco stammt aus Andalusien und vom Stierkampf distanzieren sich die meisten Bewohner Spaniens, allen voran die Kanarischen Inseln, die den Stierkampf seit 1991 verboten haben. Das Land ist so vielseitig wie seine Geschichte und lockt ganzjährig mit milden Temperaturen Sonnenanbeter, Hobby-Historiker und Sightseeing-Begeisterte auf ihre Inseln und ihr Festland."
+        "description": "Tapas, flamenco and bullfighting: Anyone who believes that Spanish culture can be broken down so easily is clearly mistaken. The fact is: tapas are a regional dish from Catalonia, flamenco originates from Andalusia and most inhabitants of Spain distance themselves from bullfighting, especially the Canary Islands, which have banned bullfighting since 1991. The country is as diverse as its history, and its year-round mild temperatures attract sun worshippers, amateur historians and sightseeing enthusiasts to its islands and mainland.",
+        "description_de": "Tapas, Flamenco und Stierkampf: Wer glaubt, dass sich die spanische Kultur so einfach herunterbrechen lässt, liegt eindeutig falsch. Fakt ist: Tapas sind ein regionales Gericht aus Katalonien, der Flamenco stammt aus Andalusien und vom Stierkampf distanzieren sich die meisten Bewohner Spaniens, allen voran die Kanarischen Inseln, die den Stierkampf seit 1991 verboten haben. Das Land ist so vielseitig wie seine Geschichte und lockt ganzjährig mit milden Temperaturen Sonnenanbeter, Hobby-Historiker und Sightseeing-Begeisterte auf ihre Inseln und ihr Festland."
     },
     {
         "id": 8,
-        "name": "Italien",
+        "name": "Italy",
+        "name_de": "Italien",
         "imageName": "italy",
-        "description": "Italien unterteilt sich aufgrund seiner langgezogenen Stiefelform in Nord- und Südrichtung in unterschiedliche Klimaregionen: Die Alpenregion im Norden mit einem hochalpinen Klima und einer langen Skisaison im Winter und milderes, mediterranes Klima im Alpenvorland in Südtirol, in der Po-Ebene und an den oberitalienischen Seen, wie dem Gardasee. In Zentralitalien und im Landesinneren kann es im Winter sogar zu Schneefällen kommen, wohingegen die Sommer angenehm warm sind. Richtung Süden wird es zunehmende heißer. Das italienische Festland ist vor allem für Fans von Sightseeingtrips ein attraktives Reiseziel. Jede Stadt bietet beeindruckende Sehenswürdigkeiten und entführt mit ihrer Architektur in historische Zeiten. Die Küstenregion der Abruzzen bietet dagegen ein vielfältiges Programm für Sonnenhungrige und Aktivurlauber. Über 200 Inseln zählt das italienische Staatsgebiet. Die Anzahl variiert tatsächlich, da die durch Eruption eines Unterwasservulkans entstandenen kleinen Eilande nach geraumer Zeit wieder vom Wasser verschluckt werden. Von touristischem Interesse sind deshalb vor allem die größeren, bewohnten Inseln. Zu den größten und beliebtesten Inseln zählen definitiv Sizilien und Sardinien. Sizilien ist tatsächlich die größte Insel im Mittelmeer, dicht gefolgt von Sardinien."
+        "description": "Italy is divided into different climatic regions due to its long boot shape in the north and south directions: The Alpine region in the north, with a high alpine climate and a long ski season in winter, and milder, Mediterranean climates in the foothills of the Alps in South Tyrol, the Po Valley and the lakes of northern Italy, such as Lake Garda. In central Italy and in the interior, there may even be snowfall in winter, whereas the summers are pleasantly warm. Towards the south it becomes increasingly hot. The Italian mainland is an attractive destination especially for fans of sightseeing trips. Each city offers impressive sights and takes you back to historical times with its architecture. The coastal region of Abruzzo, on the other hand, offers a diverse program for sun-seekers and active vacationers. The Italian territory counts more than 200 islands. The number actually varies, as the small islets formed by the eruption of an underwater volcano are swallowed up by the water again after a considerable time. Therefore, of tourist interest are mainly the larger, inhabited islands. Among the largest and most popular islands are definitely Sicily and Sardinia. Sicily is actually the largest island in the Mediterranean, closely followed by Sardinia.",
+        "description_de": "Italien unterteilt sich aufgrund seiner langgezogenen Stiefelform in Nord- und Südrichtung in unterschiedliche Klimaregionen: Die Alpenregion im Norden mit einem hochalpinen Klima und einer langen Skisaison im Winter und milderes, mediterranes Klima im Alpenvorland in Südtirol, in der Po-Ebene und an den oberitalienischen Seen, wie dem Gardasee. In Zentralitalien und im Landesinneren kann es im Winter sogar zu Schneefällen kommen, wohingegen die Sommer angenehm warm sind. Richtung Süden wird es zunehmende heißer. Das italienische Festland ist vor allem für Fans von Sightseeingtrips ein attraktives Reiseziel. Jede Stadt bietet beeindruckende Sehenswürdigkeiten und entführt mit ihrer Architektur in historische Zeiten. Die Küstenregion der Abruzzen bietet dagegen ein vielfältiges Programm für Sonnenhungrige und Aktivurlauber. Über 200 Inseln zählt das italienische Staatsgebiet. Die Anzahl variiert tatsächlich, da die durch Eruption eines Unterwasservulkans entstandenen kleinen Eilande nach geraumer Zeit wieder vom Wasser verschluckt werden. Von touristischem Interesse sind deshalb vor allem die größeren, bewohnten Inseln. Zu den größten und beliebtesten Inseln zählen definitiv Sizilien und Sardinien. Sizilien ist tatsächlich die größte Insel im Mittelmeer, dicht gefolgt von Sardinien."
     },
     {
         "id": 9,
         "name": "Portugal",
+        "name_de": "Portugal",
         "imageName": "portugal",
-        "description": "Das Land auf der Iberischen Halbinsel eignet sich hervorragend für einen Städtetrip nach Lissabon oder Porto, einen Strandurlaub an der Algarve, einen Aktivurlaub auf den Azoren oder einen Roadtrip quer durch die abwechslungsreiche Landschaft."
+        "description": "The country on the Iberian Peninsula is perfect for a city trip to Lisbon or Porto, a beach vacation in the Algarve, an active vacation in the Azores or a road trip across the varied landscape.",
+        "description_de": "Das Land auf der Iberischen Halbinsel eignet sich hervorragend für einen Städtetrip nach Lissabon oder Porto, einen Strandurlaub an der Algarve, einen Aktivurlaub auf den Azoren oder einen Roadtrip quer durch die abwechslungsreiche Landschaft."
     },
     {
         "id": 10,
-        "name": "Frankreich",
+        "name": "France",
+        "name_de": "Frankreich",
         "imageName": "france",
-        "description": "Frankreich, mon amour! Kein anderes Land ist für seine kulinarischen Spezialitäten so bekannt wie Frankreich: Krosse Baguettes, buttrige Croissants und exzellenter Wein sind nicht die einzigen Errungenschaften, die es weit über die Landesgrenzen hinaus geschafft haben. Doch genau so wenig, wie Frankreich auf seine Hauptstadt Paris verkürzt werden kann, würde es ausreichen, das Land auf seine kulinarischen Einflüsse zu beschränken. Es bietet interessante Großstadtmetropolen für einen Kurztrip, beeindruckende Landschaften für einen Roadtrip und traumhafte Strände für einen Sommerurlaub."
+        "description": "France, mon amour! No other country is as famous for its culinary specialties as France: crusty baguettes, buttery croissants and excellent wine are not the only achievements that have made it far beyond the country's borders. But just as France cannot be reduced to its capital, Paris, it would be insufficient to limit the country to its culinary influences. It offers interesting metropolises for a short trip, impressive landscapes for a road trip, and gorgeous beaches for a summer vacation.",
+        "description_de": "Frankreich, mon amour! Kein anderes Land ist für seine kulinarischen Spezialitäten so bekannt wie Frankreich: Krosse Baguettes, buttrige Croissants und exzellenter Wein sind nicht die einzigen Errungenschaften, die es weit über die Landesgrenzen hinaus geschafft haben. Doch genau so wenig, wie Frankreich auf seine Hauptstadt Paris verkürzt werden kann, würde es ausreichen, das Land auf seine kulinarischen Einflüsse zu beschränken. Es bietet interessante Großstadtmetropolen für einen Kurztrip, beeindruckende Landschaften für einen Roadtrip und traumhafte Strände für einen Sommerurlaub."
     },
     {
         "id": 11,
-        "name": "Philippinen",
+        "name": "Philippines",
+        "name_de": "Philippinen",
         "imageName": "philippines",
-        "description": "Die Philippinen und ihre zahlreichen Inseln sind ein echtes Paradies für Strandurlauber. Nahezu auf jeder Insel findet Ihr wunderschöne Traumstrände mit feinem Sand und türkisblauem Wasser. Dabei haben vor allem auch die kleineren Inseln noch zahlreiche Strände zu bieten, die nicht von Touristen überlaufen sind. Viele Strände auf den Philippinen überzeugen mit einer einzigartigen Kulisse, egal ob von Palmen gesäumt oder von Felsen umgeben."
+        "description": "The Philippines and its numerous islands are a real paradise for beach vacationers. Almost on every island you will find beautiful dream beaches with fine sand and turquoise water. Especially the smaller islands still have numerous beaches to offer, which are not overrun by tourists. Many beaches in the Philippines convince with a unique scenery, whether lined with palm trees or surrounded by rocks.",
+        "description_de": "Die Philippinen und ihre zahlreichen Inseln sind ein echtes Paradies für Strandurlauber. Nahezu auf jeder Insel findet Ihr wunderschöne Traumstrände mit feinem Sand und türkisblauem Wasser. Dabei haben vor allem auch die kleineren Inseln noch zahlreiche Strände zu bieten, die nicht von Touristen überlaufen sind. Viele Strände auf den Philippinen überzeugen mit einer einzigartigen Kulisse, egal ob von Palmen gesäumt oder von Felsen umgeben."
     },
     {
         "id": 12,
-        "name": "Kanada",
+        "name": "Canada",
+        "name_de": "Kanada",
         "imageName": "canada",
-        "description": "Zu den bekanntesten Highlights Kanadas zählen sicherlich die modernen und kulturell vielfältigen Metropolen Vancouver und Toronto, die französisches Flair ausstrahlenden Städte Quebec und Montreal und die abwechslungsreiche Natur: Von schneebedeckten Gipfeln im Yukon bis hin zu grünen Regenwäldern auf Vancouver Island. Von Bergzügen der Rocky Mountains bis hin zu kleinen Inseln im Sankt Lorenz Strom. Darüber hinaus gibt es noch viele weniger besuchte Gegenden, in denen Sie bei während Ihrer Reise fast unentdeckte landschaftliche Schätze erleben und der lokalen Bevölkerung authentisch begegnen können. In den entlegenen Bergen Alaskas kommen Sie mit den Gastgebern und anderen Gästen der Lodge zum Nachmittagstee zusammen und tauschen Geschichten und Erfahrungen aus. Und wenn Sie am Ende Ihres Urlaubs einfach die Seele baumeln lassen möchten, so geht das im Okanagan Valley im Westen Kanadas bei einem Glas Wein aus den Weinbergen Ihrer Gastgeber ebenso gut wie am langen Sandstrand auf Prince Edward Island im Osten."
+        "description": "Canada's most famous highlights certainly include the modern and culturally diverse metropolises of Vancouver and Toronto, the French flair radiating cities of Quebec and Montreal, and the varied nature: from snow-capped peaks in the Yukon to green rainforests on Vancouver Island. From mountain ranges of the Rocky Mountains to small islands in the Saint Lawrence Current. In addition, there are many lesser visited areas where you can experience almost undiscovered scenic treasures and meet the local people authentically during your trip. In the remote Alaskan mountains, join your hosts and other lodge guests for afternoon tea and share stories and experiences. And if you just want to unwind at the end of your vacation, the Okanagan Valley in western Canada is just as good for that as the long sandy beach on Prince Edward Island in the east, with a glass of wine from your hosts' vineyards.",
+        "description_de": "Zu den bekanntesten Highlights Kanadas zählen sicherlich die modernen und kulturell vielfältigen Metropolen Vancouver und Toronto, die französisches Flair ausstrahlenden Städte Quebec und Montreal und die abwechslungsreiche Natur: Von schneebedeckten Gipfeln im Yukon bis hin zu grünen Regenwäldern auf Vancouver Island. Von Bergzügen der Rocky Mountains bis hin zu kleinen Inseln im Sankt Lorenz Strom. Darüber hinaus gibt es noch viele weniger besuchte Gegenden, in denen Sie bei während Ihrer Reise fast unentdeckte landschaftliche Schätze erleben und der lokalen Bevölkerung authentisch begegnen können. In den entlegenen Bergen Alaskas kommen Sie mit den Gastgebern und anderen Gästen der Lodge zum Nachmittagstee zusammen und tauschen Geschichten und Erfahrungen aus. Und wenn Sie am Ende Ihres Urlaubs einfach die Seele baumeln lassen möchten, so geht das im Okanagan Valley im Westen Kanadas bei einem Glas Wein aus den Weinbergen Ihrer Gastgeber ebenso gut wie am langen Sandstrand auf Prince Edward Island im Osten."
     }
 ]

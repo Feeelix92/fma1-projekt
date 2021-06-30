@@ -5,21 +5,23 @@ struct DestinationDetail: View {
     var destination: Destination
 
     var body: some View {
-        ScrollView {
-            destination.image
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .ignoresSafeArea()
-            VStack(alignment: .leading) {
-                Text(destination.name)
-                    .font(.title)
-                Divider()
-                Text(destination.description)
+        if let currentLanguage = Locale.current.languageCode {
+            ScrollView {
+                destination.image
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .ignoresSafeArea()
+                VStack(alignment: .leading) {
+                    Text(currentLanguage == "de" ? destination.name_de : destination.name).font(.title)
+                    Divider()
+                    Text(currentLanguage == "de" ? destination.description_de : destination.description)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                .padding()
             }
-            .padding()
+            .navigationTitle(currentLanguage == "de" ? destination.name_de : destination.name)
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationTitle(destination.name)
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

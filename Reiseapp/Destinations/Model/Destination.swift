@@ -5,7 +5,9 @@ import SwiftUI
 struct Destination: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
+    var name_de: String
     var description: String
+    var description_de: String
     private var imageName: String
     var image: Image {
         Image(imageName)

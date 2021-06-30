@@ -29,8 +29,8 @@
 "speedCalculator" = "Speed Calculator";
 "metersPerSecond" = "m/s";
 "kilometersPerHour" = "km/h";
-"milesPerHour" = "mph";
-"knots" = "knots";
+"milesPerHour" = "mi/h";
+"knots" = "kn";
 "calculate" = "Calculate";
 "amount" = "Amount";
 "tipCalculator" = "Tip Calculator";

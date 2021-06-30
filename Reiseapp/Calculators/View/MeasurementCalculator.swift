@@ -25,13 +25,13 @@ struct MeasurementCalculator: View {
                             .onChange(of: fromValue) {
                                 measurementCalculatorModel.fromValue = Double($0) ?? 0.0
                                 measurementCalculatorModel.calculate(direction: .Forward, fromUnit: fromUnit.asUnit, toUnit: toUnit.asUnit)
-                                toValue = String(measurementCalculatorModel.toValue)
+                                toValue = String(format: "%.4f", measurementCalculatorModel.toValue)
                             }
                         Text(LocalizedStringKey("from"))
                         DropDown(items: Length.allCases, selectedIndex: $fromUnit)
                             .onChange(of: fromUnit) {
                                 measurementCalculatorModel.calculate(direction: .Forward, fromUnit: $0.asUnit, toUnit: toUnit.asUnit)
-                                toValue = String(measurementCalculatorModel.toValue)
+                                toValue = String(format: "%.4f", measurementCalculatorModel.toValue)
                             }
                     }
                     Text("=").padding(6)
@@ -39,16 +39,19 @@ struct MeasurementCalculator: View {
                         TextField("", text: $toValue)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .keyboardType(.decimalPad)
-                            .onChange(of: toValue) {
-                                measurementCalculatorModel.toValue = Double($0) ?? 0.0
-                                measurementCalculatorModel.calculate(direction: .Backward, fromUnit: fromUnit.asUnit, toUnit: toUnit.asUnit)
-                                fromValue = String(measurementCalculatorModel.fromValue)
-                            }
+                            .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+//                            .onChange(of: toValue) {
+//                                measurementCalculatorModel.toValue = Double($0) ?? 0.0
+//                                measurementCalculatorModel.calculate(direction: .Backward, fromUnit: fromUnit.asUnit, toUnit: toUnit.asUnit)
+//                                fromValue = String(measurementCalculatorModel.fromValue)
+//                            }
                         Text(LocalizedStringKey("to"))
                         DropDown(items: Length.allCases, selectedIndex: $toUnit)
                             .onChange(of: toUnit) {
-                                measurementCalculatorModel.calculate(direction: .Backward, fromUnit: fromUnit.asUnit, toUnit: $0.asUnit)
-                                fromValue = String(measurementCalculatorModel.fromValue)
+//                                measurementCalculatorModel.calculate(direction: .Backward, fromUnit: fromUnit.asUnit, toUnit: $0.asUnit)
+//                                fromValue = String(measurementCalculatorModel.fromValue)
+                                measurementCalculatorModel.calculate(direction: .Forward, fromUnit: fromUnit.asUnit, toUnit: $0.asUnit)
+                                toValue = String(format: "%.4f", measurementCalculatorModel.toValue)
                             }
                     }
                 }

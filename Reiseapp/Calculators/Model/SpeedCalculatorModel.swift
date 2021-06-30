@@ -30,7 +30,18 @@ class SpeedCalculatorModel: ObservableObject{
         milesPerHour = formatter.string(from: fromSpeed.converted(to: .milesPerHour))
         knots = formatter.string(from: fromSpeed.converted(to: .knots))
         converted = true
-        units = [metersPerSecond, kilometersPerHour, milesPerHour, knots]
+        switch selectedInputSpeed {
+        case .metersPerSecond:
+            units = [kilometersPerHour, milesPerHour, knots]
+        case .kilometersPerHour:
+            units = [metersPerSecond, milesPerHour, knots]
+        case .milesPerHour:
+            units = [metersPerSecond, kilometersPerHour, knots]
+        case .knots:
+            units = [metersPerSecond, kilometersPerHour, milesPerHour]
+        default:
+            units = [metersPerSecond, kilometersPerHour, milesPerHour, knots]
+        }
     }
 }
 

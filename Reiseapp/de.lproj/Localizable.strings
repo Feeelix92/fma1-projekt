@@ -29,8 +29,8 @@
 "speedCalculator" = "Geschwindigkeitsrechner";
 "metersPerSecond" = "m/s";
 "kilometersPerHour" = "km/h";
-"milesPerHour" = "mph";
-"knots" = "Knoten";
+"milesPerHour" = "mi/h";
+"knots" = "kn";
 "calculate" = "Berechnen";
 "amount" = "Betrag";
 "tipCalculator" = "Trinkgeldrechner";

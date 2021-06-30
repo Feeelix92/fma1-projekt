@@ -51,12 +51,10 @@ struct SpeedCalculator: View {
             Divider()
             if  speedCalculator.converted{
                 VStack(spacing: 10) {
-                    Text(speedCalculator.metersPerSecond)
-                    Text(speedCalculator.kilometersPerHour)
-                    Text(speedCalculator.milesPerHour)
-                    Text(speedCalculator.knots)
+                    ForEach(speedCalculator.units, id: \.self){ unit in
+                        Text(unit)
+                    }
                 }
-                
             }
             Spacer()
         }

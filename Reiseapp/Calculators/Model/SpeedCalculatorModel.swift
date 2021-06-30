@@ -16,6 +16,7 @@ class SpeedCalculatorModel: ObservableObject{
     @Published var kilometersPerHour: String = "0.0"
     @Published var milesPerHour: String = "0.0"
     @Published var knots: String = "0.0"
+    @Published var units: [String] = []
     var converted = false
     
     var fromSpeed: Measurement<UnitSpeed> {
@@ -29,6 +30,7 @@ class SpeedCalculatorModel: ObservableObject{
         milesPerHour = formatter.string(from: fromSpeed.converted(to: .milesPerHour))
         knots = formatter.string(from: fromSpeed.converted(to: .knots))
         converted = true
+        units = [metersPerSecond, kilometersPerHour, milesPerHour, knots]
     }
 }
 

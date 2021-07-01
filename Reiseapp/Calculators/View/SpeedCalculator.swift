@@ -24,7 +24,7 @@ struct SpeedCalculator: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.decimalPad)
                     .onChange(of: selectedSpeedTextField){ newValue in
-                        speedCalculator.currentSpeed = Double(self.selectedSpeedTextField)!
+                        speedCalculator.currentSpeed = Double(self.selectedSpeedTextField) ?? 0.0
                     }
             }
             Picker("baseUnit", selection: $selectedSpeed){

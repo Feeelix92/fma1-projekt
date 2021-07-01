@@ -6,20 +6,22 @@ struct DestinationDetail: View {
 
     var body: some View {
         if let currentLanguage = Locale.current.languageCode {
+            let destinationName = currentLanguage == "de" ? destination.name_de : destination.name
+            let destinationDescription = currentLanguage == "de" ? destination.description_de : destination.description
             ScrollView {
                 destination.image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .ignoresSafeArea()
                 VStack(alignment: .leading) {
-                    Text(currentLanguage == "de" ? destination.name_de : destination.name).font(.title)
+                    Text(destinationName).font(.title)
                     Divider()
-                    Text(currentLanguage == "de" ? destination.description_de : destination.description)
+                    Text(destinationDescription)
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 .padding()
             }
-            .navigationTitle(currentLanguage == "de" ? destination.name_de : destination.name)
+            .navigationTitle(destinationName)
             .navigationBarTitleDisplayMode(.inline)
         }
     }

@@ -9,7 +9,7 @@
 import Foundation
 
 class SpeedCalculatorModel: ObservableObject{
-    var currentSpeed: Double = 0.0
+    @Published var currentSpeed: Double = 0.0
     var selectedInputSpeed: UnitSpeed = .kilometersPerHour
     let formatter = MeasurementFormatter()
     @Published var metersPerSecond: String = "0.0"

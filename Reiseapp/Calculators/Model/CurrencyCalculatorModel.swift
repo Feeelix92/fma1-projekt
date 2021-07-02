@@ -8,17 +8,10 @@
 import Foundation
 
 class CurrencyCalculatorModel: ObservableObject {
-    var currencyBase: String
-    var currencyOutput: String
-    @Published var currencyAmount: Double
+    @Published var currencyBase: String = "EUR"
+    @Published var currencyOutput: String = "USD"
+    @Published var currencyAmount: Double = 0.0
     @Published var convertedAmount: Double = 0.0
-    
-    init(currencyBase: String, currencyOutput: String, currencyAmount: Double) {
-        self.currencyBase = currencyBase
-        self.currencyOutput = currencyOutput
-        self.currencyAmount = currencyAmount
-        convert()
-    }
     
     func convert(){
         let urlData = "convert?from=\(self.currencyBase)&to=\(self.currencyOutput)&amount=\(self.currencyAmount)"

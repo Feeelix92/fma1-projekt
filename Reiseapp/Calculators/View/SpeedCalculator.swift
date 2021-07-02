@@ -9,11 +9,14 @@ import SwiftUI
 
 
 struct SpeedCalculator: View {
-    @State private var isSpeedScrollExpanded = false
-    @State private var selectedSpeed = Speed.kmh
+    //Model
+    @StateObject var speedCalculator = SpeedCalculatorModel()
+    
+    // TextField default
     @State private var selectedSpeedTextField: String = ""
     
-    @StateObject var speedCalculator = SpeedCalculatorModel()
+    // Picker Default
+    @State private var selectedSpeed = Speed.kmh
 
     var body: some View {
         VStack {
@@ -25,6 +28,7 @@ struct SpeedCalculator: View {
                     .keyboardType(.decimalPad)
                     .onChange(of: selectedSpeedTextField){ newValue in
                         speedCalculator.currentSpeed = Double(self.selectedSpeedTextField) ?? 0.0
+                        speedCalculator.convertSpeed()
                     }
             }
             Picker("baseUnit", selection: $selectedSpeed){
@@ -37,19 +41,7 @@ struct SpeedCalculator: View {
                 speedCalculator.convertSpeed()
             })
             .pickerStyle(SegmentedPickerStyle())
-            Divider()
-            Button(action: {
-                // Button Action
-                speedCalculator.currentSpeed = Double(selectedSpeedTextField) ?? 0.0
-                speedCalculator.selectedInputSpeed = selectedSpeed.asUnit
-                speedCalculator.convertSpeed()
-                    
-            }, label: {
-                Text(LocalizedStringKey("calculate"))
-                    .font(.title2)
-            })
-            Divider()
-            if  speedCalculator.converted{
+            if  selectedSpeedTextField != ""{
                 VStack(spacing: 10) {
                     ForEach(speedCalculator.units, id: \.self){ unit in
                         Text(unit)
